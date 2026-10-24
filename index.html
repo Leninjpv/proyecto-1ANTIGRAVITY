@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FluxNode — Automatización Visual y Agentes de IA de Código Abierto</title>
-  <meta name="description" content="Plataforma de automatización de flujos de trabajo de código abierto. Conecta APIs, ejecuta código JS/Python y orquesta agentes de IA con total soberanía de datos. Alternativa libre a n8n y Zapier.">
+  <title>DATA CENTER LIRAY CLARO — Automatización de Misión Crítica & Agentes de IA</title>
+  <meta name="description" content="DATA CENTER LIRAY CLARO: Plataforma enterprise de automatización de flujos de trabajo, orquestación de agentes de IA y telemetría de misión crítica en infraestructura Tier IV de Claro Chile.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,19 +14,24 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
+            claro: {
+              DEFAULT: '#DA291C',
+              bright: '#E60000',
+              hover: '#F01E10',
+              dark: '#A31208',
+              50: '#fef2f2',
+              100: '#fee2e2',
+              200: '#fecaca',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c'
             },
             dark: {
-              900: '#060911',
-              800: '#0b0f19',
-              700: '#121826',
-              600: '#1e293b'
+              950: '#05060A',
+              900: '#080A10',
+              850: '#0E111B',
+              800: '#141824',
+              700: '#1F2436'
             }
           },
           fontFamily: {
@@ -39,75 +44,73 @@
     }
   </script>
 
-  <!-- Custom CSS -->
+  <!-- Custom CSS (Claro Red & White Branding) -->
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<body class="bg-[#060911] text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white">
+<body class="bg-[#06070B] text-white min-h-screen selection:bg-red-600 selection:text-white">
 
   <!-- =========================================================================
-       NAVIGATION BAR
+       NAVIGATION BAR (CLARO RED & WHITE BRANDING)
        ========================================================================= -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#060911]/85 border-b border-slate-800/80 transition-all">
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#06070B]/90 border-b border-red-950/60 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1.5px] shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all">
-          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-            <svg class="w-5 h-5 text-indigo-400 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+      <!-- Logo DATA CENTER LIRAY CLARO -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <!-- Claro Red Iconic Emblem -->
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#A31208] via-[#DA291C] to-[#E60000] p-[2px] shadow-lg shadow-red-600/40 group-hover:shadow-red-600/70 transition-all">
+          <div class="w-full h-full bg-[#0a0c14] rounded-[14px] flex items-center justify-center">
+            <span class="text-white font-extrabold text-base tracking-tighter font-heading group-hover:scale-110 transition-transform">
+              C<span class="text-red-500">•</span>
+            </span>
           </div>
         </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold tracking-tight text-white font-heading flex items-center gap-1.5">
-            FluxNode
-            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">v3.2</span>
+          <span class="text-lg sm:text-xl font-black tracking-tight text-white font-heading uppercase flex items-center gap-2">
+            DATA CENTER LIRAY CLARO
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-600/20 text-white border border-red-500/50 font-bold">TIER IV</span>
           </span>
-          <span class="text-[10px] text-slate-400 -mt-1 font-mono tracking-wider">OPEN AUTOMATION</span>
+          <span class="text-[10px] text-red-200/90 font-mono tracking-wider uppercase font-semibold">Plataforma de Automatización & IA</span>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#interactive-canvas-section" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+        <a href="#interactive-canvas-section" class="hover:text-red-400 transition-colors flex items-center gap-1.5 text-white">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
           Lienzo Interactivo
         </a>
-        <a href="#features" class="hover:text-indigo-400 transition-colors">Características</a>
-        <a href="#comparison" class="hover:text-indigo-400 transition-colors">Comparativa</a>
-        <a href="#templates" class="hover:text-indigo-400 transition-colors">Plantillas</a>
-        <a href="#integrations" class="hover:text-indigo-400 transition-colors">Integraciones</a>
-        <a href="#pricing" class="hover:text-indigo-400 transition-colors">Precios</a>
-        <a href="#docs" class="hover:text-indigo-400 transition-colors">Docs</a>
+        <a href="#features" class="hover:text-red-400 transition-colors">Capacidades</a>
+        <a href="#comparison" class="hover:text-red-400 transition-colors">Comparativa</a>
+        <a href="#templates" class="hover:text-red-400 transition-colors">Plantillas</a>
+        <a href="#integrations" class="hover:text-red-400 transition-colors">Conectores</a>
+        <a href="#pricing" class="hover:text-red-400 transition-colors">Infraestructura</a>
+        <a href="#docs" class="hover:text-red-400 transition-colors">Docs</a>
       </nav>
 
-      <!-- Right Actions (GitHub & CTA) -->
-      <div class="hidden sm:flex items-center gap-4">
-        <!-- GitHub Star Pill -->
-        <a href="https://github.com" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 hover:border-slate-600 text-xs font-mono text-slate-300 hover:text-white transition-all shadow-sm">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-          <span>Star</span>
-          <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[11px] text-indigo-300 font-semibold">18.4k</span>
-        </a>
+      <!-- Right Actions (Claro Red & White) -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Status Pill -->
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#141722] border border-red-900/40 text-xs font-mono text-white">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <span>NOC Liray: 99.999% SLA</span>
+        </div>
 
         <!-- Self host button -->
-        <a href="#quickstart" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 transition-all flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <a href="#quickstart" class="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#141824] hover:bg-[#1f2436] border border-slate-700 transition-all flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          Docker
+          Docker Liray
         </a>
 
-        <!-- Primary CTA -->
-        <a href="#quickstart" class="px-4 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-400 hover:to-indigo-500 shadow-md shadow-indigo-500/25 transition-all">
-          Empezar Gratis
+        <!-- Primary CTA Red Claro -->
+        <a href="#quickstart" class="btn-claro px-4 py-2 rounded-xl text-xs font-bold text-white shadow-lg transition-all uppercase tracking-wide">
+          Iniciar Consola
         </a>
       </div>
 
       <!-- Mobile Menu Hamburger -->
-      <button id="btn-mobile-menu" aria-label="Menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+      <button id="btn-mobile-menu" aria-label="Menu" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-red-950/40">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
         </svg>
@@ -115,109 +118,106 @@
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-[#090d16] px-4 pt-3 pb-6 space-y-3">
-      <a href="#interactive-canvas-section" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800/60">Lienzo Interactivo</a>
-      <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/40">Características</a>
-      <a href="#comparison" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/40">Comparativa</a>
-      <a href="#templates" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/40">Plantillas</a>
-      <a href="#integrations" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/40">Integraciones</a>
-      <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/40">Precios</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-red-900/60 bg-[#090b12] px-4 pt-3 pb-6 space-y-3">
+      <a href="#interactive-canvas-section" class="block px-3 py-2 rounded-md text-base font-bold text-white bg-red-600/30">Lienzo Interactivo</a>
+      <a href="#features" class="block px-3 py-2 rounded-md text-base font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40">Capacidades</a>
+      <a href="#comparison" class="block px-3 py-2 rounded-md text-base font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40">Comparativa</a>
+      <a href="#templates" class="block px-3 py-2 rounded-md text-base font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40">Plantillas</a>
+      <a href="#integrations" class="block px-3 py-2 rounded-md text-base font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40">Conectores</a>
+      <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40">Infraestructura</a>
       <div class="pt-4 flex flex-col gap-2">
-        <a href="#quickstart" class="w-full text-center py-2.5 rounded-lg text-sm font-semibold text-white bg-indigo-600">Empezar con Docker</a>
+        <a href="#quickstart" class="w-full text-center py-2.5 rounded-lg text-sm font-bold text-white bg-red-600 hover:bg-red-500 uppercase">Desplegar en Data Center Liray</a>
       </div>
     </div>
   </header>
 
   <main>
     <!-- =========================================================================
-         HERO SECTION
+         HERO SECTION (CLARO RED & WHITE)
          ========================================================================= -->
     <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
-      <!-- Ambient Glow Highlights -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] hero-glow-1 pointer-events-none rounded-full blur-3xl -z-10"></div>
+      <!-- Ambient Red & White Glows -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[450px] hero-glow-1 pointer-events-none rounded-full blur-3xl -z-10"></div>
       <div class="absolute top-1/3 left-1/4 w-[500px] h-[300px] hero-glow-2 pointer-events-none rounded-full blur-3xl -z-10"></div>
       <div class="absolute top-1/2 right-1/4 w-[450px] h-[300px] hero-glow-3 pointer-events-none rounded-full blur-3xl -z-10"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <!-- New Release Pill -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-950/40 text-xs text-indigo-300 mb-8 badge-shimmer">
+        <!-- Red Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/50 bg-red-950/40 text-xs text-white mb-8 badge-shimmer shadow-lg shadow-red-900/30">
           <span class="flex h-2 w-2 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-90"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
           </span>
-          <span class="font-medium">Nuevo en FluxNode 3.2:</span>
-          <span class="text-slate-300">Agentes Autónomos Multi-LLM, RAG nativo & 500+ Nodos</span>
-          <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <span class="font-bold text-white tracking-wide uppercase">DATA CENTER LIRAY CLARO:</span>
+          <span class="text-white/90 font-medium">Orquestación de Misión Crítica & IA en Servidores Tier IV</span>
+          <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </div>
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-heading max-w-5xl mx-auto leading-[1.12]">
-          Automatiza sin límites.<br>
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-cyan-300 to-indigo-200">
-            Donde el código y lo visual conviven.
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight font-heading max-w-5xl mx-auto leading-[1.12] text-white uppercase">
+          Automatización Extrema.<br>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-white to-red-400">
+            DATA CENTER LIRAY CLARO
           </span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-          Diseña flujos visualmente complejos, orquesta agentes de IA autónomos y añade código en <strong class="text-slate-200 font-medium">JavaScript o Python</strong> cuando lo necesitas. Autoalójalo en tu propia infraestructura con <strong class="text-cyan-300 font-medium">100% de soberanía de datos</strong> o utilízalo gestionado en la nube.
+        <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Diseña y ejecuta flujos de trabajo de alta disponibilidad, orquesta agentes de IA autónomos con <strong class="text-white font-bold">cero fugas de datos</strong> y conecta cualquier API sobre la infraestructura de fibra óptica y cómputo más avanzada de Chile.
         </p>
 
-        <!-- CTA Buttons -->
+        <!-- CTA Buttons (Red & White) -->
         <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="#interactive-canvas-section" class="px-7 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
-            <svg class="w-5 h-5 text-cyan-200" fill="currentColor" viewBox="0 0 20 20">
+          <a href="#interactive-canvas-section" class="btn-claro px-8 py-4 rounded-xl font-bold text-white text-sm sm:text-base shadow-xl flex items-center gap-2 uppercase tracking-wide">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
             </svg>
             Probar Lienzo Interactivo
           </a>
 
-          <a href="#quickstart" class="px-6 py-3.5 rounded-xl font-semibold text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 transition-all flex items-center gap-2">
-            <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a href="#quickstart" class="px-7 py-4 rounded-xl font-bold text-white bg-[#121624] hover:bg-[#1a2034] border border-red-500/40 hover:border-red-400 transition-all flex items-center gap-2 shadow-lg">
+            <svg class="w-5 h-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
-            <span class="font-mono text-sm">docker run fluxnode</span>
+            <span class="font-mono text-xs sm:text-sm text-white">docker run claro-liray</span>
           </a>
 
-          <a href="https://github.com" target="_blank" rel="noreferrer" class="px-5 py-3.5 rounded-xl font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-2 text-sm">
-            <span>Ver Código en GitHub</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300">Apache 2.0</span>
+          <a href="#comparison" class="px-5 py-4 rounded-xl font-bold text-white hover:text-red-400 transition-all flex items-center gap-2 text-sm uppercase">
+            <span>Ver Comparativa vs n8n & Zapier</span> →
           </a>
         </div>
 
         <!-- Social Proof Stats Row -->
-        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-10 border-t border-slate-800/60">
-          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
-            <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">100%</div>
-            <div class="text-xs text-slate-400 mt-1">Código Abierto & Autoalojable</div>
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-10 border-t border-red-950/60">
+          <div class="p-4 rounded-xl bg-[#0f121c] border border-red-900/30 shadow-md">
+            <div class="text-2xl sm:text-3xl font-black text-white font-mono">99.999%</div>
+            <div class="text-xs text-red-200/90 font-semibold mt-1 uppercase">SLA Tier IV Liray</div>
           </div>
-          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
-            <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">500+</div>
-            <div class="text-xs text-slate-400 mt-1">Nodos & Conectores Nativos</div>
+          <div class="p-4 rounded-xl bg-[#0f121c] border border-red-900/30 shadow-md">
+            <div class="text-2xl sm:text-3xl font-black text-red-500 font-mono">500+</div>
+            <div class="text-xs text-white mt-1 uppercase font-semibold">Nodos & Protocolos</div>
           </div>
-          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
-            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">25M+</div>
-            <div class="text-xs text-slate-400 mt-1">Ejecuciones Diarias</div>
+          <div class="p-4 rounded-xl bg-[#0f121c] border border-red-900/30 shadow-md">
+            <div class="text-2xl sm:text-3xl font-black text-white font-mono">&lt; 1ms</div>
+            <div class="text-xs text-red-200/90 font-semibold mt-1 uppercase">Latencia Anillo Claro</div>
           </div>
-          <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/60">
-            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">$0</div>
-            <div class="text-xs text-slate-400 mt-1">Costo por Tarea en Self-Hosted</div>
+          <div class="p-4 rounded-xl bg-[#0f121c] border border-red-900/30 shadow-md">
+            <div class="text-2xl sm:text-3xl font-black text-red-500 font-mono">100%</div>
+            <div class="text-xs text-white mt-1 uppercase font-semibold">Soberanía de Datos</div>
           </div>
         </div>
 
-        <!-- Trusted Tech Cloud / Integrations bar -->
+        <!-- Infrastructure Badges -->
         <div class="mt-12">
-          <p class="text-xs uppercase tracking-widest text-slate-500 font-mono">Compatible con tus herramientas y modelos favoritos</p>
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">⚡ OpenAI</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">🧠 Anthropic Claude</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">🦙 Ollama (Local)</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">🐘 PostgreSQL</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">🐳 Docker</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">☸️ Kubernetes</span>
-            <span class="text-sm font-semibold tracking-wide text-slate-300 flex items-center gap-2">💬 Slack</span>
+          <p class="text-xs uppercase tracking-widest text-slate-400 font-mono font-bold">Certificaciones e Integraciones del Ecosistema Claro</p>
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-8 md:gap-14 text-white font-bold text-sm">
+            <span class="flex items-center gap-2 bg-[#121624] px-3.5 py-1.5 rounded-lg border border-red-950">🔴 Certificación Tier IV</span>
+            <span class="flex items-center gap-2 bg-[#121624] px-3.5 py-1.5 rounded-lg border border-red-950">🛡️ ISO 27001 Seguridad</span>
+            <span class="flex items-center gap-2 bg-[#121624] px-3.5 py-1.5 rounded-lg border border-red-950">⚡ Red 400 Gbps Claro</span>
+            <span class="flex items-center gap-2 bg-[#121624] px-3.5 py-1.5 rounded-lg border border-red-950">🧠 IA en Servidores Locales</span>
+            <span class="flex items-center gap-2 bg-[#121624] px-3.5 py-1.5 rounded-lg border border-red-950">🐳 Kubernetes & Docker</span>
           </div>
         </div>
       </div>
@@ -228,53 +228,53 @@
          ========================================================================= -->
     <section id="interactive-canvas-section" class="py-12 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-600/20 border border-red-500/50 text-white text-xs font-mono font-bold mb-3 uppercase tracking-wider">
           <span>EXPERIENCIA EN VIVO</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-          Pruébalo ahora mismo: Lienzo interactivo en tiempo real
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white uppercase">
+          Lienzo de Flujos en Vivo — DATA CENTER LIRAY CLARO
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-          Arrastra los nodos para reorganizarlos, haz clic en cualquiera para inspeccionar su configuración y pulsa <span class="text-emerald-400 font-semibold font-mono">"Ejecutar Flujo"</span> para ver la simulación en acción.
+        <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+          Arrastra los nodos, haz clic para ver parámetros de telemetría y presiona <span class="text-red-400 font-bold font-mono">"Ejecutar Flujo"</span> para observar el procesamiento en tiempo real.
         </p>
 
         <!-- Workflow Preset Selector Tabs -->
         <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
-          <button data-workflow-preset="lead-scoring" class="px-4 py-2 rounded-lg text-xs font-mono font-medium border border-indigo-500/80 bg-indigo-600/30 text-white shadow transition-all">
-            ⚡ Clasificación Lead IA & CRM
+          <button data-workflow-preset="lead-scoring" class="px-4 py-2 rounded-xl text-xs font-mono font-bold border border-red-500 bg-red-600 text-white shadow-lg shadow-red-600/40 transition-all uppercase">
+            ⚡ Telemetría Tier IV & Alerta IA
           </button>
-          <button data-workflow-preset="devops-autopilot" class="px-4 py-2 rounded-lg text-xs font-mono font-medium border border-slate-700 bg-slate-900/80 text-slate-400 hover:text-white transition-all">
-            🚨 Autopilot DevOps & Ollama
+          <button data-workflow-preset="devops-autopilot" class="px-4 py-2 rounded-xl text-xs font-mono font-bold border border-slate-700 bg-slate-900/90 text-slate-300 hover:text-white transition-all uppercase">
+            🚨 Autopilot DevOps & Failover Claro
           </button>
         </div>
       </div>
 
       <!-- Canvas Box Container -->
-      <div class="relative rounded-2xl border border-slate-700/80 bg-[#0a0e1a] shadow-2xl overflow-hidden">
+      <div class="relative rounded-2xl border-2 border-red-900/50 bg-[#090b11] shadow-2xl overflow-hidden">
         <!-- Canvas Top Toolbar -->
-        <div class="px-4 py-3 bg-[#0d1222] border-b border-slate-800 flex flex-wrap items-center justify-between gap-4">
+        <div class="px-4 py-3 bg-[#0f131f] border-b border-red-950 flex flex-wrap items-center justify-between gap-4">
           <div class="flex items-center gap-3">
-            <span class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
-              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
-              Flujo:
+            <span class="flex items-center gap-1.5 text-xs font-mono text-red-300 font-bold">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+              CLUSTER:
             </span>
-            <span id="canvas-workflow-name" class="text-sm font-semibold text-white font-heading">
-              ⚡ Clasificación de Leads con IA & Sincronización CRM
+            <span id="canvas-workflow-name" class="text-sm font-bold text-white font-heading uppercase">
+              ⚡ DATA CENTER LIRAY CLARO — Telemetría de Servidores & Alerta IA
             </span>
-            <span id="execution-status-badge" class="px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              Listo para Ejecución
+            <span id="execution-status-badge" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-red-600/20 text-white border border-red-500/50 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+              Tier IV Listo
             </span>
           </div>
 
           <div class="flex items-center gap-3">
-            <span id="execution-time-text" class="text-xs font-mono text-slate-400 hidden sm:inline">
+            <span id="execution-time-text" class="text-xs font-mono text-slate-300 hidden sm:inline font-medium">
               Arrastra nodos o inspecciona detalles
             </span>
-            <button id="btn-toggle-console" class="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center gap-1.5">
-              <span>Consola</span>
+            <button id="btn-toggle-console" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition flex items-center gap-1.5">
+              <span>Consola NOC</span>
             </button>
-            <button id="btn-run-workflow" class="px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 shadow-md shadow-emerald-500/25 transition flex items-center gap-2">
+            <button id="btn-run-workflow" class="btn-claro px-4 py-1.5 rounded-lg text-xs font-bold text-white shadow-md transition flex items-center gap-2 uppercase tracking-wide">
               <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
               </svg>
@@ -292,13 +292,13 @@
           <div id="canvas-nodes-layer" class="w-full h-full relative"></div>
 
           <!-- Slide-out Node Inspector Drawer -->
-          <aside id="node-inspector-drawer" class="absolute top-0 right-0 h-full w-80 sm:w-96 bg-[#0f172a]/95 backdrop-blur-xl border-l border-slate-700 shadow-2xl p-5 flex flex-col z-30 transform translate-x-full transition-transform duration-300 ease-in-out">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <aside id="node-inspector-drawer" class="absolute top-0 right-0 h-full w-80 sm:w-96 bg-[#0f1422]/95 backdrop-blur-xl border-l border-red-900/60 shadow-2xl p-5 flex flex-col z-30 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex items-center justify-between pb-4 border-b border-red-950">
               <div class="flex items-center gap-2">
-                <h3 id="inspector-node-title" class="text-sm font-bold text-white font-heading">Inspeccionar Nodo</h3>
-                <span id="inspector-node-type" class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">NODO</span>
+                <h3 id="inspector-node-title" class="text-sm font-black text-white font-heading uppercase">Inspeccionar Nodo</h3>
+                <span id="inspector-node-type" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-red-600/30 text-white border border-red-500/50">NODO</span>
               </div>
-              <button id="btn-close-inspector" aria-label="Cerrar inspector" class="text-slate-400 hover:text-white p-1 rounded hover:bg-slate-800">
+              <button id="btn-close-inspector" aria-label="Cerrar inspector" class="text-slate-300 hover:text-white p-1 rounded hover:bg-slate-800">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
@@ -307,111 +307,111 @@
 
             <div class="flex-1 overflow-y-auto py-4 space-y-4 text-xs font-mono">
               <div>
-                <span class="text-slate-400 font-semibold block mb-1 text-[11px] uppercase tracking-wider">Parámetros / Configuración</span>
-                <pre id="inspector-node-config" class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 text-indigo-300 overflow-x-auto text-[11px] leading-relaxed"></pre>
+                <span class="text-white font-bold block mb-1 text-[11px] uppercase tracking-wider">Parámetros / Configuración Claro</span>
+                <pre id="inspector-node-config" class="p-3 rounded-lg bg-black/80 border border-red-950 text-white overflow-x-auto text-[11px] leading-relaxed"></pre>
               </div>
 
               <div>
-                <span class="text-slate-400 font-semibold block mb-1 text-[11px] uppercase tracking-wider">Payload de Salida (JSON Schema)</span>
-                <pre id="inspector-node-output" class="p-3 rounded-lg bg-slate-950/80 border border-slate-800 text-emerald-300 overflow-x-auto text-[11px] leading-relaxed"></pre>
+                <span class="text-white font-bold block mb-1 text-[11px] uppercase tracking-wider">Payload de Telemetría (JSON)</span>
+                <pre id="inspector-node-output" class="p-3 rounded-lg bg-black/80 border border-red-950 text-red-200 overflow-x-auto text-[11px] leading-relaxed"></pre>
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-800 flex gap-2">
-              <button onclick="window.FluxToast.show('Modo de prueba de nodo aislado activo', 'info')" class="flex-1 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-sans text-xs font-semibold transition">
-                Probar Paso Único
+            <div class="pt-3 border-t border-red-950 flex gap-2">
+              <button onclick="window.FluxToast.show('Prueba de nodo en Data Center Liray ejecutada', 'info')" class="btn-claro flex-1 py-2 rounded-lg text-white font-sans text-xs font-bold transition uppercase">
+                Probar Paso Aislado
               </button>
             </div>
           </aside>
         </div>
 
         <!-- Real-time Execution Console (Collapsible) -->
-        <div id="execution-console" class="border-t border-slate-800 bg-slate-950/90 backdrop-blur-md">
-          <div class="px-4 py-2 bg-slate-900/60 border-b border-slate-800/80 flex items-center justify-between">
-            <span class="text-xs font-mono text-slate-400 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              Logs de Ejecución en Vivo (Event Stream)
+        <div id="execution-console" class="border-t border-red-950 bg-black/95 backdrop-blur-md">
+          <div class="px-4 py-2 bg-[#0e121e] border-b border-red-950 flex items-center justify-between">
+            <span class="text-xs font-mono text-white font-bold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              Event Stream NOC Liray (Tiempo Real)
             </span>
-            <button id="btn-clear-console" class="text-[11px] font-mono text-slate-400 hover:text-white">
+            <button id="btn-clear-console" class="text-[11px] font-mono font-bold text-slate-300 hover:text-white">
               Limpiar
             </button>
           </div>
           <div id="execution-log-output" class="p-3 h-28 overflow-y-auto space-y-1 font-mono text-xs">
-            <div class="text-slate-500">[Esperando ejecución...] Pulsa "Ejecutar Flujo" para ver los eventos y pasos en tiempo real.</div>
+            <div class="text-slate-400">[Esperando telemetría...] Pulsa "Ejecutar Flujo" para simular la orquestación en Data Center Liray Claro.</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         COMPARISON TABLE (FLUXNODE VS ZAPIER VS MAKE VS N8N)
+         COMPARISON TABLE (DATA CENTER LIRAY CLARO VS N8N VS ZAPIER VS MAKE)
          ========================================================================= -->
     <section id="comparison" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">COMPARATIVA DIRECTA</h2>
-        <h3 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          ¿Por qué elegir FluxNode frente a otras plataformas?
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">COMPARATIVA DE INFRAESTRUCTURA</h2>
+        <h3 class="text-3xl sm:text-4xl font-black text-white font-heading uppercase">
+          ¿Por qué elegir DATA CENTER LIRAY CLARO?
         </h3>
-        <p class="mt-3 text-slate-400 max-w-2xl mx-auto text-base">
-          No te conformes con pagar penalizaciones por cada tarea ejecutada ni entregues tus datos sensibles a nubes de terceros.
+        <p class="mt-3 text-slate-300 max-w-2xl mx-auto text-base">
+          Garantiza residencia física en territorio nacional, baja latencia y disponibilidad Tier IV con soporte de telecomunicaciones de primer nivel.
         </p>
       </div>
 
-      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40 backdrop-blur-md shadow-2xl">
+      <div class="overflow-x-auto rounded-2xl border-2 border-red-950 bg-[#0d101a] backdrop-blur-md shadow-2xl">
         <table class="w-full text-left border-collapse text-sm">
           <thead>
-            <tr class="border-b border-slate-800 bg-slate-900/80">
-              <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold w-1/3">Capacidad / Característica</th>
-              <th class="p-4 sm:p-5 font-heading text-white font-bold bg-indigo-600/15 border-x border-indigo-500/30 text-indigo-300">
-                <span class="flex items-center gap-1.5">⚡ FluxNode</span>
+            <tr class="border-b border-red-950 bg-[#121624]">
+              <th class="p-4 sm:p-5 font-heading text-white font-bold w-1/3">Capacidad Crítica</th>
+              <th class="p-4 sm:p-5 font-heading text-white font-black bg-red-600/30 border-x border-red-500/50">
+                <span class="flex items-center gap-2 uppercase tracking-wide">🔴 DATA CENTER LIRAY CLARO</span>
               </th>
-              <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold">n8n</th>
+              <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold">n8n (Self-Host)</th>
               <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold">Zapier</th>
-              <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold">Make (Integromat)</th>
+              <th class="p-4 sm:p-5 font-heading text-slate-300 font-semibold">Make</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-800/60 font-sans">
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Autoalojable (100% Control y Privacidad)</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">✓ Ilimitado en Docker/K8s</td>
-              <td class="p-4 sm:p-5 text-emerald-400">✓ Versión Comunitaria</td>
-              <td class="p-4 sm:p-5 text-red-400">✗ Solo Cloud propietaria</td>
-              <td class="p-4 sm:p-5 text-red-400">✗ Solo Cloud propietaria</td>
+          <tbody class="divide-y divide-red-950/60 font-sans">
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Soberanía de Datos & Residencia en Chile</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">✓ 100% Data Center Liray (Colina, CL)</td>
+              <td class="p-4 sm:p-5 text-slate-300">Depende de tu VPS</td>
+              <td class="p-4 sm:p-5 text-red-400">✗ Nube externa (USA)</td>
+              <td class="p-4 sm:p-5 text-red-400">✗ Nube externa (EU/USA)</td>
             </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Costo por Tarea / Ejecución</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">$0 (Ilimitadas en Self-Host)</td>
-              <td class="p-4 sm:p-5 text-emerald-400">$0 (Self-Host) / Plan Cloud</td>
-              <td class="p-4 sm:p-5 text-red-400 font-mono text-xs">Pagas cada 1k ejecuciones ($$$)</td>
-              <td class="p-4 sm:p-5 text-amber-400 font-mono text-xs">Créditos por operación</td>
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Certificación de Infraestructura</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">✓ Tier IV + Redundancia N+1 / 2N</td>
+              <td class="p-4 sm:p-5 text-slate-300">Sin certificación base</td>
+              <td class="p-4 sm:p-5 text-slate-400">Cloud multi-inquilino</td>
+              <td class="p-4 sm:p-5 text-slate-400">Cloud multi-inquilino</td>
             </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Orquestación Nativa de Agentes de IA</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">✓ Multi-LLM, RAG & Memoria</td>
-              <td class="p-4 sm:p-5 text-emerald-400">✓ Nodos LangChain</td>
-              <td class="p-4 sm:p-5 text-amber-400">Limitado (Add-on caro)</td>
-              <td class="p-4 sm:p-5 text-amber-400">Limitado (Prompt básico)</td>
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Costo por Tarea / Ejecución</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">$0 (Sin cargos por tarea)</td>
+              <td class="p-4 sm:p-5 text-slate-300">$0 comunidad / Cloud de pago</td>
+              <td class="p-4 sm:p-5 text-red-400 font-mono text-xs">Pagas cada 1,000 tareas</td>
+              <td class="p-4 sm:p-5 text-red-400 font-mono text-xs">Pagas por operación</td>
             </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Código Personalizado (JS & Python)</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">✓ Soporte completo de paquetes NPM/PyPI</td>
-              <td class="p-4 sm:p-5 text-emerald-400">✓ JavaScript y Python</td>
-              <td class="p-4 sm:p-5 text-amber-400">Restringido (Solo librerías básicas)</td>
-              <td class="p-4 sm:p-5 text-amber-400">Funciones limitadas</td>
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Agentes de IA On-Premise (Sin Fugas)</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">✓ Servidores locales GPU en Liray</td>
+              <td class="p-4 sm:p-5 text-slate-300">✓ Conectores LangChain</td>
+              <td class="p-4 sm:p-5 text-red-400">✗ Solo APIs externas</td>
+              <td class="p-4 sm:p-5 text-red-400">✗ Solo APIs externas</td>
             </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Control de Versiones Git & CI/CD</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">✓ JSON nativo / Git Sync</td>
-              <td class="p-4 sm:p-5 text-emerald-400">✓ Git Integration</td>
-              <td class="p-4 sm:p-5 text-red-400">✗ Sin Git nativo</td>
-              <td class="p-4 sm:p-5 text-red-400">✗ Sin Git nativo</td>
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Conectividad & Backbone de Fibra</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">✓ Enlace directo Claro 400 Gbps</td>
+              <td class="p-4 sm:p-5 text-slate-300">Internet pública estándar</td>
+              <td class="p-4 sm:p-5 text-slate-400">Internet pública</td>
+              <td class="p-4 sm:p-5 text-slate-400">Internet pública</td>
             </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="p-4 sm:p-5 text-slate-300 font-medium">Licencia y Código Abierto</td>
-              <td class="p-4 sm:p-5 bg-indigo-600/10 border-x border-indigo-500/30 text-emerald-400 font-semibold">Apache 2.0 / Libre</td>
-              <td class="p-4 sm:p-5 text-amber-400">Fair-code (Restricción comercial)</td>
-              <td class="p-4 sm:p-5 text-red-400">Propietario / Cerrado</td>
-              <td class="p-4 sm:p-5 text-red-400">Propietario / Cerrado</td>
+            <tr class="hover:bg-red-950/20 transition">
+              <td class="p-4 sm:p-5 text-white font-semibold">Soporte NOC 24/7/365 en Español</td>
+              <td class="p-4 sm:p-5 bg-red-600/20 border-x border-red-500/50 text-white font-black">✓ Ingenieros dedicados Claro Chile</td>
+              <td class="p-4 sm:p-5 text-slate-300">Foro comunitario</td>
+              <td class="p-4 sm:p-5 text-slate-400">Tickets en inglés</td>
+              <td class="p-4 sm:p-5 text-slate-400">Tickets en inglés</td>
             </tr>
           </tbody>
         </table>
@@ -419,101 +419,101 @@
     </section>
 
     <!-- =========================================================================
-         CORE FEATURES PILLARS (6 CARDS)
+         CORE CAPABILITIES PILLARS (6 CARDS)
          ========================================================================= -->
     <section id="features" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">POTENCIA PARA DESARROLLADORES</h2>
-        <h3 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
-          Construido para soportar cualquier nivel de complejidad
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">CAPACIDADES ENTERPRISE</h2>
+        <h3 class="text-3xl sm:text-5xl font-black text-white font-heading uppercase">
+          Arquitectura Robusta para Cargas Críticas
         </h3>
-        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
-          Olvida los límites de las herramientas tradicionales "no-code". FluxNode te ofrece la velocidad de una interfaz visual con la flexibilidad de un IDE.
+        <p class="mt-4 text-slate-300 max-w-2xl mx-auto text-base">
+          Diseñado para instituciones financieras, telecomunicaciones, minería, retail y gobierno con requisitos innegociables de uptime.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Feature 1 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-5">
-            🔀
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
+            🏢
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Lienzo Visual con Depuración en Vivo</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Diseña grafos ramificados, bucles y condiciones complejas. Observa los datos exactos que fluyen entre cada conector tras cada prueba unitaria.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Infraestructura Tier IV Certificada</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Alojamiento en el Data Center Liray de Claro (Colina, Chile), con climatización redundante, respaldo eléctrico dual continuo y acceso biométrico estricto.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
-            <span>• Inspección JSON paso a paso</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • 99.999% de disponibilidad garantizada
           </div>
         </div>
 
         <!-- Feature 2 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-5">
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
             🧠
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Agentes de IA y Flujos RAG</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Conecta modelos en la nube (OpenAI, Claude, Gemini) o modelos locales en Ollama sin enviar tus datos a terceros. Añade bases vectoriales como Pinecone, Qdrant o pgvector.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Agentes de IA On-Premise</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Orquesta modelos de lenguaje avanzados (LLMs) ejecutados dentro del perímetro de seguridad de Claro, manteniendo los datos confidenciales protegidos bajo leyes locales.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-purple-400">
-            <span>• Memoria de conversación y Tools</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • Cero telemetría hacia el exterior
           </div>
         </div>
 
         <!-- Feature 3 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-5">
-            💻
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
+            ⚡
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Código Nativo JS y Python</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Cuando una fórmula no sea suficiente, inserta un nodo de código completo. Importa paquetes de NPM o PyPI y manipula estructuras complejas de datos sin restricciones.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Conectividad de Ultra Baja Latencia</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Interconexión directa con el anillo troncal de fibra óptica de Claro Chile. Menos de 1 ms de latencia hacia los principales centros de datos de la Región Metropolitana.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-cyan-400">
-            <span>• Ejecución aislada en sandbox seguro</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • Backbone de fibra redundante 400G
           </div>
         </div>
 
         <!-- Feature 4 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-5">
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
             🐳
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Autoalojamiento en 1 Comando</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Despliega en tu propia nube (AWS, GCP, Azure, Hetzner o tu Raspberry Pi) con una sola línea de Docker. Tus credenciales y datos se quedan en tus servidores.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Despliegue Híbrido & Kubernetes</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Despliega en contenedores Docker, clusters de Kubernetes o máquinas dedicadas gestionadas por el equipo de ingeniería de Claro.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
-            <span>• Cumplimiento GDPR y SOC2 inmediato</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • Soporte K8s / Helm / Docker Compose
           </div>
         </div>
 
         <!-- Feature 5 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-5">
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
             🛡️
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Manejo de Errores y Resiliencia</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Configura reintentos exponenciales automáticos, flujos alternativos cuando una API externa falle y alertas instantáneas a tu equipo de guardia en Discord o Slack.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Mitigación DDoS & Cifrado AES-256</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Protección perimetral con los scrubbing centers de Claro contra ataques DDoS volumétricos y cifrado militar en reposo de todas las credenciales de tus APIs.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-amber-400">
-            <span>• Sub-workflows de auto-sanación</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • Firewall de aplicaciones & WAF activo
           </div>
         </div>
 
         <!-- Feature 6 -->
-        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800/80">
-          <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-xl mb-5">
-            🏢
+        <div class="feature-card glass-panel glass-panel-hover p-6 rounded-2xl border border-red-950">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-5 font-bold">
+            🚨
           </div>
-          <h4 class="text-lg font-bold text-white font-heading mb-2">Gobernanza y Equipos Enterprise</h4>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Gestión de accesos basada en roles (RBAC), inicio de sesión único con SSO (Okta, Azure AD), auditoría inmutable de accesos y cifrado AES-256 en reposo.
+          <h4 class="text-lg font-bold text-white font-heading mb-2 uppercase">Soporte NOC 24/7 de Claro</h4>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Supervisión ininterrumpida por ingenieros certificados de redes y sistemas desde las instalaciones de Liray, con escalamiento inmediato ante cualquier anomalía.
           </p>
-          <div class="flex items-center gap-2 text-xs font-mono text-rose-400">
-            <span>• Multi-tenancy y entornos Dev/Prod</span>
+          <div class="text-xs font-mono font-bold text-red-400">
+            • Mesa de ayuda corporativa en español
           </div>
         </div>
       </div>
@@ -524,55 +524,51 @@
          ========================================================================= -->
     <section id="quickstart" class="py-20 relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-2">
-          <span>DESPLIEGUE RÁPIDO</span>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/50 text-white text-xs font-mono font-bold mb-2 uppercase tracking-wide">
+          <span>DESPLIEGUE CLARO</span>
         </div>
-        <h3 class="text-3xl font-bold font-heading text-white">Listo para funcionar en menos de 60 segundos</h3>
-        <p class="text-slate-400 text-sm mt-2">Elige tu método de despliegue preferido y copia el comando.</p>
+        <h3 class="text-3xl font-black font-heading text-white uppercase">Inicia tu Nodo en DATA CENTER LIRAY CLARO</h3>
+        <p class="text-slate-300 text-sm mt-2">Ejecuta el comando en tus servidores o en la nube privada de Claro.</p>
       </div>
 
-      <!-- Terminal Window Component -->
-      <div class="terminal-window border border-slate-700/80 shadow-2xl">
-        <!-- Terminal Header -->
-        <div class="px-4 py-3 bg-[#0d1222] border-b border-slate-800 flex items-center justify-between">
+      <!-- Terminal Window -->
+      <div class="terminal-window border border-red-950 shadow-2xl">
+        <div class="px-4 py-3 bg-[#0d101a] border-b border-red-950 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
-            <span class="text-xs font-mono text-slate-400 ml-2">bash - fluxnode deployment</span>
+            <span class="w-3 h-3 rounded-full bg-red-600 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+            <span class="text-xs font-mono text-white font-bold ml-2">bash — claro-liray deployment</span>
           </div>
 
-          <!-- CLI Tabs -->
-          <div class="flex items-center gap-1 bg-slate-900/80 p-1 rounded-lg border border-slate-800 text-xs font-mono">
-            <button data-cli-tab="docker" class="px-3 py-1 rounded bg-slate-800 text-white border border-indigo-500 transition">Docker</button>
-            <button data-cli-tab="compose" class="px-3 py-1 rounded text-slate-400 hover:text-white transition">Compose</button>
-            <button data-cli-tab="k8s" class="px-3 py-1 rounded text-slate-400 hover:text-white transition">K8s Helm</button>
-            <button data-cli-tab="npm" class="px-3 py-1 rounded text-slate-400 hover:text-white transition">NPM CLI</button>
+          <div class="flex items-center gap-1 bg-[#141824] p-1 rounded-lg border border-red-950 text-xs font-mono font-bold">
+            <button data-cli-tab="docker" class="px-3 py-1 rounded bg-red-600 text-white transition">Docker</button>
+            <button data-cli-tab="compose" class="px-3 py-1 rounded text-slate-300 hover:text-white transition">Compose</button>
+            <button data-cli-tab="k8s" class="px-3 py-1 rounded text-slate-300 hover:text-white transition">K8s Liray</button>
+            <button data-cli-tab="npm" class="px-3 py-1 rounded text-slate-300 hover:text-white transition">Claro CLI</button>
           </div>
         </div>
 
-        <!-- Terminal Body -->
-        <div class="p-6 bg-[#060911] relative">
-          <pre id="cli-code-display" class="font-mono text-xs sm:text-sm text-cyan-300 leading-relaxed overflow-x-auto">docker run -d \
-  --name fluxnode \
+        <div class="p-6 bg-[#06070B] relative">
+          <pre id="cli-code-display" class="font-mono text-xs sm:text-sm text-white leading-relaxed overflow-x-auto">docker run -d \
+  --name data-center-liray-claro \
   -p 5678:5678 \
-  -v fluxnode_data:/home/node/.fluxnode \
-  -e FLUX_ENCRYPTION_KEY="auto-generated-key-928" \
-  fluxnode/fluxnode:latest</pre>
+  -v liray_storage:/data/claro-liray \
+  -e CLARO_DC_LOCATION="LIRAY_COLINA_TIER_IV" \
+  -e CLARO_ENCRYPTION_KEY="claro-enterprise-aes-256-key" \
+  claro/data-center-liray-claro:latest</pre>
 
-          <!-- Copy Button -->
-          <button id="btn-copy-cli" class="absolute top-4 right-4 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-slate-300 hover:text-white text-xs font-mono flex items-center gap-1.5 transition">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="btn-copy-cli" class="btn-claro absolute top-4 right-4 px-3.5 py-1.5 rounded-lg text-white text-xs font-mono font-bold flex items-center gap-1.5 transition">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
             </svg>
             <span>Copiar</span>
           </button>
         </div>
 
-        <!-- Terminal Footer Tip -->
-        <div class="px-4 py-2.5 bg-[#090e1c] border-t border-slate-800 text-xs font-mono text-slate-400 flex items-center justify-between">
-          <span>Acceso por defecto en: <code class="text-indigo-400">http://localhost:5678</code></span>
-          <span class="text-emerald-400">● 100% Sin telemetría obligatoria</span>
+        <div class="px-4 py-2.5 bg-[#0a0d16] border-t border-red-950 text-xs font-mono text-slate-300 flex items-center justify-between">
+          <span>Consola local: <code class="text-red-400 font-bold">http://localhost:5678</code></span>
+          <span class="text-white font-bold">● Certificado Tier IV Claro Liray</span>
         </div>
       </div>
     </section>
@@ -581,146 +577,141 @@
          ROI / SAVINGS CALCULATOR (INTERACTIVE SLIDER)
          ========================================================================= -->
     <section class="py-16 relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-indigo-500/20 shadow-2xl relative overflow-hidden">
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="glass-panel p-8 sm:p-10 rounded-3xl border-2 border-red-900/40 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="text-center max-w-2xl mx-auto mb-8">
-          <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 text-xs font-mono">CALCULADORA DE COSTOS</span>
-          <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">Calcula cuánto estás ahorrando frente a Zapier y Make</h3>
-          <p class="text-slate-400 text-sm mt-1">Mueve el control deslizante para comparar costos según el volumen mensual de tu empresa.</p>
+          <span class="px-3 py-1 rounded-full bg-red-600/20 text-white border border-red-500/50 text-xs font-mono font-bold uppercase">CALCULADORA DE COSTOS EMPRESARIALES</span>
+          <h3 class="text-2xl sm:text-3xl font-black font-heading text-white mt-2 uppercase">Compara el Ahorro de DATA CENTER LIRAY CLARO</h3>
+          <p class="text-slate-300 text-sm mt-1">Descubre cuánto ahorras frente a soluciones extranjeras que cobran penalizaciones por volumen.</p>
         </div>
 
-        <!-- Slider input -->
         <div class="max-w-xl mx-auto mb-10">
           <div class="flex justify-between items-center text-sm font-mono mb-2">
-            <span class="text-slate-400">Ejecuciones mensuales:</span>
-            <span id="text-executions-value" class="text-lg font-bold text-cyan-400">50,000 ejecuciones</span>
+            <span class="text-white font-bold">Ejecuciones mensuales:</span>
+            <span id="text-executions-value" class="text-lg font-black text-red-400">50,000 ejecuciones</span>
           </div>
-          <input id="slider-executions" type="range" min="5000" max="300000" step="5000" value="50000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500">
-          <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-1">
+          <input id="slider-executions" type="range" min="5000" max="300000" step="5000" value="50000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+          <div class="flex justify-between text-[11px] text-slate-400 font-mono mt-1 font-bold">
             <span>5k/mes</span>
             <span>150k/mes</span>
             <span>300k+/mes</span>
           </div>
         </div>
 
-        <!-- Pricing Cards Comparison -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="p-4 rounded-xl bg-[#0d101a] border border-slate-800">
             <span class="text-xs font-mono text-slate-400 block mb-1">Zapier</span>
-            <span id="cost-zapier" class="text-2xl font-bold text-red-400 font-mono">$650</span>
+            <span id="cost-zapier" class="text-2xl font-black text-slate-300 font-mono">$650</span>
             <span class="text-[11px] text-slate-500 block">/mes</span>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="p-4 rounded-xl bg-[#0d101a] border border-slate-800">
             <span class="text-xs font-mono text-slate-400 block mb-1">Make.com</span>
-            <span id="cost-make" class="text-2xl font-bold text-amber-400 font-mono">$235</span>
+            <span id="cost-make" class="text-2xl font-black text-slate-300 font-mono">$235</span>
             <span class="text-[11px] text-slate-500 block">/mes</span>
           </div>
 
-          <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-500/40 shadow-lg shadow-indigo-500/10">
-            <span class="text-xs font-mono text-indigo-300 block mb-1">FluxNode Cloud</span>
-            <span id="cost-flux" class="text-2xl font-bold text-cyan-300 font-mono">$45</span>
-            <span class="text-[11px] text-slate-400 block">/mes</span>
+          <div class="p-4 rounded-xl bg-red-950/40 border border-red-500/50 shadow-lg shadow-red-600/10">
+            <span class="text-xs font-mono text-white font-bold block mb-1">Claro Cloud Liray</span>
+            <span id="cost-flux" class="text-2xl font-black text-white font-mono">$39</span>
+            <span class="text-[11px] text-red-200 block font-bold">/mes gestionado</span>
           </div>
 
-          <div class="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 shadow-lg shadow-emerald-500/10">
-            <span class="text-xs font-mono text-emerald-300 block mb-1">FluxNode Self-Hosted</span>
-            <span id="cost-flux-self" class="text-2xl font-bold text-emerald-400 font-mono">$0</span>
-            <span class="text-[11px] text-slate-400 block">¡Gratis para siempre!</span>
+          <div class="p-4 rounded-xl bg-red-600 border border-red-400 shadow-lg shadow-red-600/30">
+            <span class="text-xs font-mono text-white font-bold block mb-1">Liray On-Premise</span>
+            <span id="cost-flux-self" class="text-2xl font-black text-white font-mono">$0</span>
+            <span class="text-[11px] text-white block font-bold">Ilimitado</span>
           </div>
         </div>
 
-        <!-- Total savings pill -->
-        <div class="mt-8 text-center pt-6 border-t border-slate-800/80">
+        <div class="mt-8 text-center pt-6 border-t border-red-950">
           <p class="text-sm text-slate-300">
-            Ahorro anual estimado con FluxNode:
-            <strong id="text-annual-savings" class="text-emerald-400 font-mono text-xl ml-1">$7,260 / año</strong>
+            Ahorro anual estimado migrando a <strong class="text-white font-bold">DATA CENTER LIRAY CLARO</strong>:
+            <strong id="text-annual-savings" class="text-white font-mono text-xl ml-1 bg-red-600 px-3 py-1 rounded-lg shadow">$7,332 / año</strong>
           </p>
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         TEMPLATES GALLERY (FILTERABLE)
+         TEMPLATES GALLERY
          ========================================================================= -->
     <section id="templates" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">GALERÍA DE CASOS DE USO</h2>
-        <h3 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          Empieza en minutos con plantillas prediseñadas
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">CATÁLOGO DE CASOS DE USO</h2>
+        <h3 class="text-3xl sm:text-4xl font-black text-white font-heading uppercase">
+          Plantillas Certificadas para Empresas
         </h3>
-        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-          Descubre flujos listos para producción verificados por la comunidad de ingenieros.
+        <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+          Flujos prediseñados y validados para entornos de misión crítica en telecomunicaciones, banca y retail.
         </p>
 
-        <!-- Category Filters -->
         <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
-          <button data-template-filter="all" class="px-4 py-1.5 rounded-full text-xs font-mono bg-indigo-600 text-white transition">Todos</button>
-          <button data-template-filter="ai" class="px-4 py-1.5 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">🤖 Agentes IA</button>
-          <button data-template-filter="devops" class="px-4 py-1.5 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">🛠️ DevOps & SRE</button>
-          <button data-template-filter="crm" class="px-4 py-1.5 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">📊 Ventas & CRM</button>
+          <button data-template-filter="all" class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-red-600 text-white transition uppercase">Todos</button>
+          <button data-template-filter="ai" class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">🤖 Agentes IA</button>
+          <button data-template-filter="devops" class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">🛠️ SRE & Redes</button>
+          <button data-template-filter="crm" class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">📊 ERP & Facturación</button>
         </div>
       </div>
 
-      <!-- Templates Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Template Card 1 -->
-        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between" data-category="ai">
+        <!-- Template 1 -->
+        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between border border-red-950" data-category="ai">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 rounded text-[11px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/30">Agentes IA</span>
-              <span class="text-xs text-slate-400 font-mono">5 nodos</span>
+              <span class="px-2.5 py-1 rounded text-[11px] font-mono font-bold bg-red-600/20 text-white border border-red-500/40 uppercase">Agentes IA Claro</span>
+              <span class="text-xs text-white font-mono font-bold">5 nodos</span>
             </div>
-            <h4 class="text-base font-bold text-white font-heading mb-2">Clasificación Automática de Tickets de Soporte</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
-              Analiza correos entrantes con Claude, clasifica sentimiento, detecta idioma y redacta un borrador de respuesta en Zendesk.
+            <h4 class="text-base font-bold text-white font-heading mb-2 uppercase">Diagnóstico Predictivo de Redes Telco</h4>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Supervisión de enlaces de fibra óptica Claro, detección de anomalías con IA local y mitigación automatizada antes de afectación a clientes.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-mono">Claude • Zendesk • Slack</span>
-            <button data-load-template="lead-scoring" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 font-mono flex items-center gap-1">
-              <span>Probar</span> →
+          <div class="pt-4 border-t border-red-950 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">BGP • IA Local • NOC</span>
+            <button data-load-template="lead-scoring" class="text-xs font-bold text-white hover:text-red-400 font-mono flex items-center gap-1 uppercase">
+              <span>Probar Flujo</span> →
             </button>
           </div>
         </div>
 
-        <!-- Template Card 2 -->
-        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between" data-category="devops">
+        <!-- Template 2 -->
+        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between border border-red-950" data-category="devops">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 rounded text-[11px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">DevOps</span>
-              <span class="text-xs text-slate-400 font-mono">6 nodos</span>
+              <span class="px-2.5 py-1 rounded text-[11px] font-mono font-bold bg-red-600/20 text-white border border-red-500/40 uppercase">DevOps Liray</span>
+              <span class="text-xs text-white font-mono font-bold">6 nodos</span>
             </div>
-            <h4 class="text-base font-bold text-white font-heading mb-2">Sanación Automática de Pods K8s</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
-              Detecta errores OOMKilled en Prometheus, corre diagnósticos con Llama 3 local y reinicia los contenedores afectados.
+            <h4 class="text-base font-bold text-white font-heading mb-2 uppercase">Conmutación y Failover Automático Tier IV</h4>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Monitoreo continuo de latencia en nodos de cómputo y redirección transparente de tráfico hacia el cluster de contingencia en menos de 2 segundos.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-mono">Prometheus • K8s • Telegram</span>
-            <button data-load-template="devops-autopilot" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 font-mono flex items-center gap-1">
+          <div class="pt-4 border-t border-red-950 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">Kubernetes • WAF • SMS</span>
+            <button data-load-template="devops-autopilot" class="text-xs font-bold text-white hover:text-red-400 font-mono flex items-center gap-1 uppercase">
               <span>Cargar en Lienzo</span> →
             </button>
           </div>
         </div>
 
-        <!-- Template Card 3 -->
-        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between" data-category="crm">
+        <!-- Template 3 -->
+        <div class="template-card glass-panel glass-panel-hover p-6 rounded-2xl flex flex-col justify-between border border-red-950" data-category="crm">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Ventas & CRM</span>
-              <span class="text-xs text-slate-400 font-mono">4 nodos</span>
+              <span class="px-2.5 py-1 rounded text-[11px] font-mono font-bold bg-red-600/20 text-white border border-red-500/40 uppercase">Banca & Retail</span>
+              <span class="text-xs text-white font-mono font-bold">4 nodos</span>
             </div>
-            <h4 class="text-base font-bold text-white font-heading mb-2">Enriquecimiento de Clientes con Clearbit & Notion</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
-              Cuando un usuario se registra en Stripe, extrae ingresos de la empresa y crea la tarjeta de prospección en Notion.
+            <h4 class="text-base font-bold text-white font-heading mb-2 uppercase">Sincronización Segura SAP / Oracle</h4>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Conexión cifrada punto a punto entre sistemas contables corporativos y pasarelas de pago con firma digital y cumplimiento tributario SII.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-mono">Stripe • Clearbit • Notion</span>
-            <button data-load-template="lead-scoring" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 font-mono flex items-center gap-1">
-              <span>Probar</span> →
+          <div class="pt-4 border-t border-red-950 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">SAP • Oracle • Webhook</span>
+            <button data-load-template="lead-scoring" class="text-xs font-bold text-white hover:text-red-400 font-mono flex items-center gap-1 uppercase">
+              <span>Probar Flujo</span> →
             </button>
           </div>
         </div>
@@ -728,280 +719,268 @@
     </section>
 
     <!-- =========================================================================
-         INTEGRATIONS DIRECTORY (LIVE SEARCH & FILTER)
+         INTEGRATIONS DIRECTORY
          ========================================================================= -->
     <section id="integrations" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">ECOSISTEMA ABIERTO</h2>
-        <h3 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          500+ Nodos Nativos para todas tus herramientas
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">CONECTIVIDAD SIN LÍMITES</h2>
+        <h3 class="text-3xl sm:text-4xl font-black text-white font-heading uppercase">
+          500+ Conectores e Integraciones Certificadas
         </h3>
-        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
-          ¿No encuentras tu servicio? El nodo universal HTTP/Webhook y el generador de nodos con OpenAPI conectan cualquier API en 30 segundos.
+        <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+          Conecta servicios legacy, bases de datos SQL/NoSQL, modelos de IA y protocolos de telecomunicaciones.
         </p>
 
-        <!-- Search Bar & Category Pills -->
         <div class="mt-8 max-w-md mx-auto">
           <div class="relative">
-            <input id="integration-search-input" type="text" placeholder="Buscar integración (ej: Postgres, OpenAI, Slack...)" class="w-full px-4 py-3 pl-11 rounded-xl bg-slate-900 border border-slate-700 focus:border-indigo-500 focus:outline-none text-sm text-white placeholder-slate-500 shadow-inner">
-            <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <input id="integration-search-input" type="text" placeholder="Buscar conector (ej: Postgres, SAP, OpenAI...)" class="w-full px-4 py-3 pl-11 rounded-xl bg-[#0f1320] border border-red-950 focus:border-red-500 focus:outline-none text-sm text-white placeholder-slate-400 shadow-inner">
+            <svg class="w-5 h-5 text-red-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
           </div>
         </div>
 
         <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-          <button data-integration-category="all" class="active px-3 py-1 rounded-full text-xs font-mono bg-indigo-600 text-white transition">Todas</button>
-          <button data-integration-category="ai" class="px-3 py-1 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">IA & Modelos</button>
-          <button data-integration-category="db" class="px-3 py-1 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">Bases de Datos</button>
-          <button data-integration-category="comm" class="px-3 py-1 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">Comunicaciones</button>
-          <button data-integration-category="dev" class="px-3 py-1 rounded-full text-xs font-mono bg-slate-800/80 text-slate-400 hover:text-white transition">DevOps & Cloud</button>
+          <button data-integration-category="all" class="active px-3 py-1 rounded-full text-xs font-mono font-bold bg-red-600 text-white transition uppercase">Todas</button>
+          <button data-integration-category="ai" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">IA & Modelos</button>
+          <button data-integration-category="db" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">Bases de Datos</button>
+          <button data-integration-category="comm" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">Mensajería Telco</button>
+          <button data-integration-category="dev" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-800/80 text-slate-300 hover:text-white transition uppercase">Redes & Cloud</button>
         </div>
       </div>
 
-      <!-- Integrations Cards Grid -->
       <div id="integration-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <!-- Item 1 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="OpenAI GPT-4" data-tags="llm gpt ai chatgpt" data-category="ai">
-          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">⚡</div>
-          <span class="text-xs font-semibold text-white">OpenAI</span>
-          <span class="text-[10px] text-slate-500 font-mono">GPT-4o & Assistants</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Claro SMS Gateway" data-tags="sms gateway claro telco" data-category="comm">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">📱</div>
+          <span class="text-xs font-bold text-white uppercase">SMS Claro</span>
+          <span class="text-[10px] text-red-200 font-mono">Gateway Masivo</span>
         </div>
 
         <!-- Item 2 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Anthropic Claude" data-tags="claude ai llm sonnet haiku" data-category="ai">
-          <div class="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🧠</div>
-          <span class="text-xs font-semibold text-white">Anthropic</span>
-          <span class="text-[10px] text-slate-500 font-mono">Claude 3.5 Sonnet</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="OpenAI GPT-4" data-tags="llm gpt ai chatgpt" data-category="ai">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">⚡</div>
+          <span class="text-xs font-bold text-white uppercase">OpenAI</span>
+          <span class="text-[10px] text-slate-400 font-mono">GPT-4o Enterprise</span>
         </div>
 
         <!-- Item 3 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Ollama Local" data-tags="ollama local llama mistral" data-category="ai">
-          <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🦙</div>
-          <span class="text-xs font-semibold text-white">Ollama</span>
-          <span class="text-[10px] text-slate-500 font-mono">Modelos Locales</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Anthropic Claude" data-tags="claude ai llm sonnet" data-category="ai">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🧠</div>
+          <span class="text-xs font-bold text-white uppercase">Claude 3.5</span>
+          <span class="text-[10px] text-slate-400 font-mono">Anthropic LLM</span>
         </div>
 
         <!-- Item 4 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="PostgreSQL" data-tags="postgres sql database db" data-category="db">
-          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🐘</div>
-          <span class="text-xs font-semibold text-white">PostgreSQL</span>
-          <span class="text-[10px] text-slate-500 font-mono">SQL & pgvector</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Ollama Liray" data-tags="ollama local llama mistral" data-category="ai">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🦙</div>
+          <span class="text-xs font-bold text-white uppercase">Ollama Local</span>
+          <span class="text-[10px] text-red-200 font-mono">Cluster GPU Liray</span>
         </div>
 
         <!-- Item 5 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Redis" data-tags="redis cache nosql queue" data-category="db">
-          <div class="w-12 h-12 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🟥</div>
-          <span class="text-xs font-semibold text-white">Redis</span>
-          <span class="text-[10px] text-slate-500 font-mono">Caché & Pub/Sub</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="PostgreSQL Liray" data-tags="postgres sql database db" data-category="db">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🐘</div>
+          <span class="text-xs font-bold text-white uppercase">PostgreSQL</span>
+          <span class="text-[10px] text-slate-400 font-mono">High Availability</span>
         </div>
 
         <!-- Item 6 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Supabase" data-tags="supabase auth db realtime" data-category="db">
-          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">⚡</div>
-          <span class="text-xs font-semibold text-white">Supabase</span>
-          <span class="text-[10px] text-slate-500 font-mono">BaaS & Edge</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="SAP ERP" data-tags="sap erp enterprise hana" data-category="db">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">💼</div>
+          <span class="text-xs font-bold text-white uppercase">SAP HANA</span>
+          <span class="text-[10px] text-slate-400 font-mono">ERP Enterprise</span>
         </div>
 
         <!-- Item 7 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Slack" data-tags="slack chat message notification" data-category="comm">
-          <div class="w-12 h-12 rounded-lg bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">💬</div>
-          <span class="text-xs font-semibold text-white">Slack</span>
-          <span class="text-[10px] text-slate-500 font-mono">Bots & Webhooks</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Kubernetes Claro" data-tags="k8s kubernetes cloud container" data-category="dev">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">☸️</div>
+          <span class="text-xs font-bold text-white uppercase">Kubernetes</span>
+          <span class="text-[10px] text-slate-400 font-mono">Cluster Claro</span>
         </div>
 
         <!-- Item 8 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Discord" data-tags="discord bot community" data-category="comm">
-          <div class="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🎮</div>
-          <span class="text-xs font-semibold text-white">Discord</span>
-          <span class="text-[10px] text-slate-500 font-mono">Webhooks & Mensajes</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Slack Alert" data-tags="slack noc chat bot" data-category="comm">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">💬</div>
+          <span class="text-xs font-bold text-white uppercase">Slack NOC</span>
+          <span class="text-[10px] text-slate-400 font-mono">Alertas Críticas</span>
         </div>
 
         <!-- Item 9 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="GitHub" data-tags="github git repo ci cd devops" data-category="dev">
-          <div class="w-12 h-12 rounded-lg bg-slate-500/10 border border-slate-500/20 text-slate-300 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🐙</div>
-          <span class="text-xs font-semibold text-white">GitHub</span>
-          <span class="text-[10px] text-slate-500 font-mono">Issues & Actions</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Redis Cluster" data-tags="redis cache pubsub" data-category="db">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🟥</div>
+          <span class="text-xs font-bold text-white uppercase">Redis SAN</span>
+          <span class="text-[10px] text-slate-400 font-mono">Caché & PubSub</span>
         </div>
 
         <!-- Item 10 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Stripe" data-tags="stripe payments billing finance" data-category="comm">
-          <div class="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">💳</div>
-          <span class="text-xs font-semibold text-white">Stripe</span>
-          <span class="text-[10px] text-slate-500 font-mono">Cobros & Webhooks</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Webhook Universal" data-tags="webhook rest http api" data-category="dev">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🌐</div>
+          <span class="text-xs font-bold text-white uppercase">HTTP Universal</span>
+          <span class="text-[10px] text-slate-400 font-mono">Cualquier API</span>
         </div>
 
         <!-- Item 11 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Docker & Kubernetes" data-tags="docker k8s k8 containers cloud" data-category="dev">
-          <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🐳</div>
-          <span class="text-xs font-semibold text-white">Kubernetes</span>
-          <span class="text-[10px] text-slate-500 font-mono">Cluster API</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="GitHub Actions" data-tags="git ci cd devops" data-category="dev">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🐙</div>
+          <span class="text-xs font-bold text-white uppercase">GitHub</span>
+          <span class="text-[10px] text-slate-400 font-mono">CI/CD Sync</span>
         </div>
 
         <!-- Item 12 -->
-        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-indigo-500/40 transition group" data-name="Universal HTTP Webhook" data-tags="webhook http api rest curl" data-category="dev">
-          <div class="w-12 h-12 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🌐</div>
-          <span class="text-xs font-semibold text-white">HTTP Universal</span>
-          <span class="text-[10px] text-slate-500 font-mono">Cualquier API REST</span>
+        <div class="integration-card glass-panel p-4 rounded-xl flex flex-col items-center text-center hover:border-red-500/60 transition group border border-red-950" data-name="Oracle DB" data-tags="oracle sql enterprise" data-category="db">
+          <div class="w-12 h-12 rounded-lg bg-red-600/20 border border-red-500/40 text-white flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">🔴</div>
+          <span class="text-xs font-bold text-white uppercase">Oracle DB</span>
+          <span class="text-[10px] text-slate-400 font-mono">Core Corporativo</span>
         </div>
       </div>
 
-      <div id="integration-no-results" class="hidden text-center py-8 text-slate-400 text-sm font-mono">
+      <div id="integration-no-results" class="hidden text-center py-8 text-white text-sm font-mono font-bold">
         No se encontraron integraciones con ese criterio. ¡Puedes usar el conector universal HTTP!
       </div>
     </section>
 
     <!-- =========================================================================
-         PRICING SECTION (MONTHLY / ANNUALLY TOGGLE)
+         PRICING / DEPLOYMENT TIERS
          ========================================================================= -->
     <section id="pricing" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">PLANES TRANSPARENTES</h2>
-        <h3 class="text-3xl sm:text-5xl font-extrabold text-white font-heading">
-          Comienza gratis en tus servidores. Crece cuando lo necesites.
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">MODELOS DE DESPLIEGUE</h2>
+        <h3 class="text-3xl sm:text-5xl font-black text-white font-heading uppercase">
+          Planes y Soluciones de Infraestructura
         </h3>
-        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
-          Sin trucos de precios por tarea en autoalojamiento. Licencia justa y transparente.
+        <p class="text-slate-300 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+          Elige entre despliegue autónomo en tus servidores o una instancia gestionada en Data Center Liray.
         </p>
 
-        <!-- Toggle Switch -->
-        <div class="mt-8 flex items-center justify-center gap-3 text-sm font-medium">
-          <span class="text-slate-300">Mensual</span>
+        <div class="mt-8 flex items-center justify-center gap-3 text-sm font-bold">
+          <span class="text-white">Mensual</span>
           <label class="relative inline-flex items-center cursor-pointer">
             <input id="pricing-toggle" type="checkbox" class="sr-only peer">
-            <div class="w-12 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+            <div class="w-12 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
           </label>
-          <span class="text-slate-300 flex items-center gap-1.5">
-            Anual
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-semibold">20% Descuento</span>
+          <span class="text-white flex items-center gap-1.5">
+            Anual Corporativo
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-red-600 text-white font-bold">20% Off</span>
           </span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-        <!-- Plan 1: Self-Hosted Community -->
-        <div class="glass-panel p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <!-- Plan 1 -->
+        <div class="glass-panel p-8 rounded-2xl border border-red-950 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <h4 class="text-xl font-bold text-white font-heading">Comunidad Self-Hosted</h4>
-              <span class="px-2.5 py-1 rounded text-xs font-mono bg-slate-800 text-slate-300">Open Source</span>
+              <h4 class="text-xl font-bold text-white font-heading uppercase">Comunidad On-Premise</h4>
+              <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-slate-800 text-white">Self-Hosted</span>
             </div>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-              Para desarrolladores independientes y equipos técnicos que quieren privacidad absoluta en su propia infraestructura.
+            <p class="text-slate-300 text-xs leading-relaxed mb-6">
+              Para equipos técnicos y DevOps que gestionan su propia infraestructura y buscan libertad sin ataduras comerciales.
             </p>
             <div class="mb-6">
-              <span class="text-4xl font-extrabold text-white font-mono">$0</span>
-              <span class="text-slate-400 text-xs">/ para siempre</span>
+              <span class="text-4xl font-black text-white font-mono">$0</span>
+              <span class="text-slate-400 text-xs font-bold">/ sin límite de tareas</span>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-300 border-t border-slate-800 pt-6">
+            <ul class="space-y-3 text-xs text-white border-t border-red-950 pt-6">
               <li class="flex items-center gap-2">
-                <span class="text-emerald-400">✓</span> Ejecuciones y flujos <strong>ilimitados</strong>
+                <span class="text-red-500 font-bold">✓</span> Flujos y ejecuciones <strong>100% ilimitadas</strong>
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-emerald-400">✓</span> Acceso a todos los <strong>500+ nodos</strong>
+                <span class="text-red-500 font-bold">✓</span> Acceso a todos los <strong>500+ conectores</strong>
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-emerald-400">✓</span> Soporte para <strong>Ollama y modelos locales</strong>
+                <span class="text-red-500 font-bold">✓</span> Soporte para <strong>Ollama y modelos locales</strong>
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-emerald-400">✓</span> Despliegue con 1 comando en Docker
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400">✓</span> Soporte en comunidad Discord & GitHub
+                <span class="text-red-500 font-bold">✓</span> Docker y Docker Compose incluido
               </li>
             </ul>
           </div>
 
           <div class="pt-8">
-            <a href="#quickstart" class="block w-full text-center py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition border border-slate-700">
-              Desplegar Docker Gratis
+            <a href="#quickstart" class="block w-full text-center py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition uppercase border border-slate-700">
+              Desplegar Docker Local
             </a>
           </div>
         </div>
 
-        <!-- Plan 2: Cloud Pro (Highlighted) -->
-        <div class="glass-panel p-8 rounded-2xl border-2 border-indigo-500 bg-slate-900/90 shadow-2xl shadow-indigo-500/10 flex flex-col justify-between relative transform lg:-translate-y-2">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-[11px] font-mono font-bold tracking-wider uppercase shadow">
-            MÁS POPULAR
+        <!-- Plan 2 (Highlighted) -->
+        <div class="glass-panel p-8 rounded-2xl border-2 border-red-600 bg-[#0e121e] shadow-2xl shadow-red-600/20 flex flex-col justify-between relative transform lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-red-600 text-white text-[11px] font-mono font-black tracking-wider uppercase shadow-lg">
+            RECOMENDADO EMPRESAS
           </div>
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <h4 class="text-xl font-bold text-white font-heading">FluxNode Cloud Pro</h4>
-              <span class="px-2.5 py-1 rounded text-xs font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">Gestionado</span>
+              <h4 class="text-xl font-bold text-white font-heading uppercase">Cloud Liray Gestionado</h4>
+              <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-red-600/30 text-white border border-red-500/50">Tier IV Claro</span>
             </div>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-              Infraestructura en la nube lista para producción sin tener que gestionar servidores, parches ni backups.
+            <p class="text-slate-300 text-xs leading-relaxed mb-6">
+              Alojado directamente en Data Center Liray con mantenimiento, respaldos diarios y conectividad de fibra incluida.
             </p>
             <div class="mb-6">
-              <span class="price-val text-4xl font-extrabold text-white font-mono" data-monthly="24" data-annual="19">$24</span>
-              <span class="price-period text-slate-400 text-xs">/mes</span>
+              <span class="price-val text-4xl font-black text-white font-mono" data-monthly="49" data-annual="39">$49</span>
+              <span class="price-period text-slate-300 text-xs font-bold">/mes</span>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-200 border-t border-slate-800 pt-6">
+            <ul class="space-y-3 text-xs text-white border-t border-red-950 pt-6">
               <li class="flex items-center gap-2">
-                <span class="text-cyan-400 font-bold">✓</span> <strong>50,000 ejecuciones</strong> de flujo al mes
+                <span class="text-red-400 font-bold">✓</span> <strong>SLA de Uptime 99.99%</strong> garantizado por Claro
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-cyan-400 font-bold">✓</span> Nodos de ejecución ultra-rápidos en Europa y USA
+                <span class="text-red-400 font-bold">✓</span> Conexión al anillo de fibra óptica metropolitano
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-cyan-400 font-bold">✓</span> Backups automáticos cada 24 horas
+                <span class="text-red-400 font-bold">✓</span> Backups automatizados diarios en SAN redundante
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-cyan-400 font-bold">✓</span> Soporte prioritario por email y chat
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-cyan-400 font-bold">✓</span> Historial de ejecuciones de 30 días
+                <span class="text-red-400 font-bold">✓</span> Soporte NOC 24/7 en español
               </li>
             </ul>
           </div>
 
           <div class="pt-8">
-            <button onclick="window.FluxToast.show('Iniciando prueba gratuita de 14 días...', 'success')" class="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-semibold text-xs shadow-lg shadow-indigo-500/30 transition">
-              Prueba Gratuita de 14 Días
+            <button onclick="window.FluxToast.show('Iniciando aprovisionamiento en Data Center Liray...', 'success')" class="btn-claro w-full py-3 rounded-xl text-white font-bold text-xs uppercase shadow-lg transition">
+              Activar en Data Center Liray
             </button>
           </div>
         </div>
 
-        <!-- Plan 3: Enterprise Dedicated -->
-        <div class="glass-panel p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <!-- Plan 3 -->
+        <div class="glass-panel p-8 rounded-2xl border border-red-950 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <h4 class="text-xl font-bold text-white font-heading">Enterprise Dedicado</h4>
-              <span class="px-2.5 py-1 rounded text-xs font-mono bg-slate-800 text-cyan-300">Custom</span>
+              <h4 class="text-xl font-bold text-white font-heading uppercase">Enterprise Dedicado</h4>
+              <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-slate-800 text-white">VPC / Jaula Física</span>
             </div>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-              Para organizaciones con requisitos estrictos de seguridad, VPC aisladas, compliance bancario o SLAs garantizados.
+            <p class="text-slate-300 text-xs leading-relaxed mb-6">
+              Servidores dedicados físicos (Bare-Metal) en Liray, interconexión MPLS/IP-VPN privada y acuerdos corporativos.
             </p>
             <div class="mb-6">
-              <span class="text-4xl font-extrabold text-white font-heading">Personalizado</span>
-              <span class="text-slate-400 text-xs block mt-1">Facturación a medida</span>
+              <span class="text-3xl font-black text-white font-heading uppercase">A Medida</span>
+              <span class="text-slate-400 text-xs block mt-1 font-bold">Contrato Corporativo Claro</span>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-300 border-t border-slate-800 pt-6">
+            <ul class="space-y-3 text-xs text-white border-t border-red-950 pt-6">
               <li class="flex items-center gap-2">
-                <span class="text-indigo-400">✓</span> <strong>Instancia dedicada en tu VPC (AWS/GCP)</strong>
+                <span class="text-red-500 font-bold">✓</span> Servidores Bare Metal dedicados en jaula Liray
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-indigo-400">✓</span> Single Sign-On (SSO SAML / Okta / Azure AD)
+                <span class="text-red-500 font-bold">✓</span> Enlace MPLS privado directo a tus sucursales
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-indigo-400">✓</span> SLA de disponibilidad garantizado del 99.99%
+                <span class="text-red-500 font-bold">✓</span> SLA 99.999% con penalizaciones garantizadas
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-indigo-400">✓</span> Auditorías completas y logs inmutables
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-indigo-400">✓</span> Ingeniero de soporte dedicado 24/7/365
+                <span class="text-red-500 font-bold">✓</span> Ingeniero SRE / NOC Claro dedicado
               </li>
             </ul>
           </div>
 
           <div class="pt-8">
-            <button onclick="window.FluxToast.show('Formulario de contacto enterprise enviado', 'info')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition border border-slate-700">
-              Contactar Ventas
+            <button onclick="window.FluxToast.show('Solicitud enviada a la gerencia de cuentas corporativas Claro', 'info')" class="btn-claro-outline w-full py-3 rounded-xl text-white font-bold text-xs transition uppercase">
+              Contactar Ejecutivo Claro
             </button>
           </div>
         </div>
@@ -1009,115 +988,51 @@
     </section>
 
     <!-- =========================================================================
-         TESTIMONIALS / COMMUNITY VOICES
-         ========================================================================= -->
-    <section class="py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">COMUNIDAD Y RESEÑAS</span>
-        <h3 class="text-2xl sm:text-4xl font-bold font-heading text-white mt-1">Lo que opinan los equipos que migraron</h3>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-indigo-600/30 text-indigo-400 flex items-center justify-center font-bold">MR</div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Mateo Ramos</h5>
-              <span class="text-xs text-slate-500 font-mono">Head of Data @ PayMetrics</span>
-            </div>
-          </div>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            "Pagábamos más de $800 al mes en Zapier por sincronizar pedidos. Migramos a FluxNode autoalojado en un droplet de Hetzner y ahorramos el 95% del costo con cero caídas."
-          </p>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-cyan-600/30 text-cyan-400 flex items-center justify-center font-bold">AL</div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Ana Lucía Torres</h5>
-              <span class="text-xs text-slate-500 font-mono">Senior DevOps @ CloudScale</span>
-            </div>
-          </div>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            "La posibilidad de correr agentes de Ollama en local para clasificar logs y alertar a Slack sin sacar información confidencial fuera de nuestra red es un antes y un después."
-          </p>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-purple-600/30 text-purple-400 flex items-center justify-center font-bold">SG</div>
-            <div>
-              <h5 class="text-sm font-semibold text-white">Santiago Gómez</h5>
-              <span class="text-xs text-slate-500 font-mono">Founder @ AutoGrowth</span>
-            </div>
-          </div>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            "El lienzo es increíblemente fluido. Poder escribir TypeScript directamente dentro de un nodo para transformar datos complejos me ahorra tener que crear microservicios auxiliares."
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         FREQUENTLY ASKED QUESTIONS
          ========================================================================= -->
     <section class="py-20 relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">RESOLVIENDO DUDAS</h2>
-        <h3 class="text-3xl font-extrabold text-white font-heading">Preguntas Frecuentes</h3>
+        <h2 class="text-xs font-mono uppercase tracking-widest text-red-400 font-bold mb-2">PREGUNTAS FRECUENTES</h2>
+        <h3 class="text-3xl font-black text-white font-heading uppercase">Dudas Comunes sobre DATA CENTER LIRAY CLARO</h3>
       </div>
 
       <div class="space-y-4">
-        <!-- FAQ Item 1 -->
-        <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden">
-          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-sm sm:text-base text-white hover:text-indigo-400 transition">
-            <span>¿En qué se diferencia FluxNode de n8n y Zapier?</span>
-            <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- FAQ 1 -->
+        <div class="faq-item glass-panel rounded-xl border border-red-950 overflow-hidden">
+          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-bold text-sm sm:text-base text-white hover:text-red-400 transition">
+            <span>¿Dónde están ubicados físicamente los servidores de DATA CENTER LIRAY CLARO?</span>
+            <svg class="faq-icon w-5 h-5 text-red-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
-            A diferencia de Zapier, FluxNode te permite autoalojar la plataforma completamente gratis en tus propios servidores, sin límite de tareas ni cobros por volumen. Frente a n8n, FluxNode incluye soporte nativo y optimizado para orquestación de agentes de IA multi-LLM (Claude, OpenAI, Ollama), ejecución de código segura en TypeScript/Python y una licencia abierta sin restricciones comerciales en la versión comunitaria.
+          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-red-950/60 pt-3">
+            Las instalaciones de Data Center Liray de Claro se encuentran en la comuna de Colina, Región Metropolitana, Chile. Es uno de los centros de datos con mayor certificación y capacidad de América Móvil en Sudamérica, garantizando que tus datos nunca salgan de la jurisdicción chilena.
           </div>
         </div>
 
-        <!-- FAQ Item 2 -->
-        <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden">
-          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-sm sm:text-base text-white hover:text-indigo-400 transition">
-            <span>¿Puedo migrar mis flujos existentes desde Zapier, Make o n8n?</span>
-            <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- FAQ 2 -->
+        <div class="faq-item glass-panel rounded-xl border border-red-950 overflow-hidden">
+          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-bold text-sm sm:text-base text-white hover:text-red-400 transition">
+            <span>¿Es compatible con los flujos y nodos existentes de n8n?</span>
+            <svg class="faq-icon w-5 h-5 text-red-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
-            Sí. FluxNode cuenta con un asistente de importación capaz de procesar exportaciones JSON de n8n y mapear automáticamente triggers y acciones de Zapier a nodos nativos de FluxNode.
+          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-red-950/60 pt-3">
+            Sí. DATA CENTER LIRAY CLARO cuenta con un importador que permite cargar archivos JSON exportados desde n8n y migrarlos de forma transparente, añadiendo optimizaciones de latencia y conectividad local.
           </div>
         </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden">
-          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-sm sm:text-base text-white hover:text-indigo-400 transition">
-            <span>¿Qué requisitos de servidor se necesitan para autoalojar?</span>
-            <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- FAQ 3 -->
+        <div class="faq-item glass-panel rounded-xl border border-red-950 overflow-hidden">
+          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-bold text-sm sm:text-base text-white hover:text-red-400 transition">
+            <span>¿Puedo conectar mis bases de datos internas sin exponerlas a Internet?</span>
+            <svg class="faq-icon w-5 h-5 text-red-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
-            FluxNode está altamente optimizado. Puedes ejecutarlo en cualquier VPS de 1 vCPU y 1 GB de RAM con Docker para cargas moderadas (hasta 10,000 ejecuciones/día). Para cargas enterprise masivas, soporta clustering escalable con Redis y PostgreSQL.
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden">
-          <button class="faq-question w-full p-5 text-left flex items-center justify-between font-heading font-semibold text-sm sm:text-base text-white hover:text-indigo-400 transition">
-            <span>¿Cómo se protegen las credenciales de mis APIs?</span>
-            <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
-            Todas las credenciales y tokens se cifran en reposo con AES-256-GCM utilizando tu clave maestra personal definida en variables de entorno (<code class="text-indigo-300">FLUX_ENCRYPTION_KEY</code>). Ni los desarrolladores ni ningún tercero pueden descifrar tus secretos.
+          <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-red-950/60 pt-3">
+            Totalmente. Gracias al servicio de enlaces dedicados y túneles privados IP-VPN de Claro, tus flujos pueden comunicarse directamente con tus servidores on-premise a través de una red privada sin salir a Internet pública.
           </div>
         </div>
       </div>
@@ -1127,26 +1042,25 @@
          BOTTOM HERO / CTA BANNER
          ========================================================================= -->
     <section class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl bg-gradient-to-tr from-indigo-950 via-[#0d1222] to-slate-900 border border-indigo-500/30 p-8 sm:p-14 text-center relative overflow-hidden shadow-2xl">
-        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="rounded-3xl bg-gradient-to-tr from-[#A31208] via-[#0f131f] to-[#06070B] border-2 border-red-600/50 p-8 sm:p-14 text-center relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
-        <h3 class="text-3xl sm:text-5xl font-extrabold text-white font-heading max-w-3xl mx-auto">
-          Toma el control total de tus flujos de trabajo hoy mismo
+        <h3 class="text-3xl sm:text-5xl font-black text-white font-heading max-w-3xl mx-auto uppercase">
+          Activa la Automatización en DATA CENTER LIRAY CLARO
         </h3>
-        <p class="mt-4 text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
-          Únete a miles de ingenieros y constructores que ya automatizan con total soberanía y flexibilidad.
+        <p class="mt-4 text-slate-200 max-w-xl mx-auto text-sm sm:text-base">
+          Despliega flujos resilientes respaldados por la red de telecomunicaciones y el centro de datos más avanzado de Claro.
         </p>
 
-        <!-- Quick email deploy token form -->
         <form id="quick-deploy-form" class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-          <input type="email" required placeholder="tu-email@empresa.com" class="flex-1 px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-indigo-500 focus:outline-none text-sm text-white placeholder-slate-500 shadow-inner">
-          <button type="submit" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30 whitespace-nowrap">
-            Recibir Guía Docker
+          <input type="email" required placeholder="tu-correo@empresa.cl" class="flex-1 px-4 py-3 rounded-xl bg-black/90 border border-red-900 focus:border-red-500 focus:outline-none text-sm text-white placeholder-slate-400 shadow-inner">
+          <button type="submit" class="btn-claro px-6 py-3 rounded-xl text-white font-bold text-sm transition uppercase whitespace-nowrap">
+            Recibir Acceso
           </button>
         </form>
 
-        <p class="mt-4 text-[11px] text-slate-500 font-mono">
-          ✓ Sin spam • Recibe plantilla Docker Compose + token de la comunidad
+        <p class="mt-4 text-[11px] text-white/80 font-mono font-bold">
+          ✓ Acceso inmediato a la imagen Docker de DATA CENTER LIRAY CLARO
         </p>
       </div>
     </section>
@@ -1155,63 +1069,57 @@
   <!-- =========================================================================
        FOOTER
        ========================================================================= -->
-  <footer class="border-t border-slate-800 bg-[#04060b] py-14 text-slate-400 text-xs">
+  <footer class="border-t border-red-950 bg-[#040508] py-14 text-slate-300 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-5 gap-8">
-      <!-- Col 1: Brand -->
       <div class="col-span-2">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">FN</div>
-          <span class="text-lg font-bold text-white font-heading">FluxNode</span>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-black text-sm">C•</div>
+          <span class="text-lg font-black text-white font-heading uppercase">DATA CENTER LIRAY CLARO</span>
         </div>
-        <p class="text-slate-400 text-xs leading-relaxed max-w-sm mb-4">
-          La plataforma moderna de automatización de código abierto. Conecta aplicaciones, añade lógica con código e interactúa con agentes de IA autónomos.
+        <p class="text-slate-300 text-xs leading-relaxed max-w-sm mb-4">
+          Plataforma de automatización de flujos de misión crítica, orquestación de agentes de IA y telemetría avanzada alojada en el Data Center Liray de Claro Chile.
         </p>
-        <div class="flex items-center gap-2 text-[11px] font-mono text-emerald-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Todos los sistemas operativos y estables
+        <div class="flex items-center gap-2 text-[11px] font-mono text-white font-bold">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          Infraestructura Tier IV Operativa (Colina, Chile)
         </div>
       </div>
 
-      <!-- Col 2: Producto -->
       <div>
-        <h5 class="text-white font-semibold font-heading mb-3">Producto</h5>
+        <h5 class="text-white font-bold font-heading mb-3 uppercase">Plataforma</h5>
         <ul class="space-y-2 font-mono">
-          <li><a href="#interactive-canvas-section" class="hover:text-white transition">Lienzo en Vivo</a></li>
-          <li><a href="#features" class="hover:text-white transition">Características</a></li>
-          <li><a href="#integrations" class="hover:text-white transition">500+ Nodos</a></li>
-          <li><a href="#templates" class="hover:text-white transition">Plantillas</a></li>
-          <li><a href="#pricing" class="hover:text-white transition">Precios</a></li>
+          <li><a href="#interactive-canvas-section" class="hover:text-red-400 transition">Lienzo en Vivo</a></li>
+          <li><a href="#features" class="hover:text-red-400 transition">Capacidades</a></li>
+          <li><a href="#integrations" class="hover:text-red-400 transition">500+ Conectores</a></li>
+          <li><a href="#templates" class="hover:text-red-400 transition">Plantillas</a></li>
+          <li><a href="#pricing" class="hover:text-red-400 transition">Modelos de Despliegue</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Recursos -->
       <div>
-        <h5 class="text-white font-semibold font-heading mb-3">Desarrolladores</h5>
+        <h5 class="text-white font-bold font-heading mb-3 uppercase">Operaciones</h5>
         <ul class="space-y-2 font-mono">
-          <li><a href="#quickstart" class="hover:text-white transition">Guía Docker</a></li>
-          <li><a href="https://github.com" target="_blank" rel="noreferrer" class="hover:text-white transition">Repositorio GitHub</a></li>
-          <li><a href="#" class="hover:text-white transition">Documentación API</a></li>
-          <li><a href="#" class="hover:text-white transition">Crear Nodos Custom</a></li>
-          <li><a href="#" class="hover:text-white transition">Changelog</a></li>
+          <li><a href="#quickstart" class="hover:text-red-400 transition">Docker Liray</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">NOC 24/7 Claro</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Reporte SLA 99.999%</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Seguridad & ISO 27001</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Legal & Comunidad -->
       <div>
-        <h5 class="text-white font-semibold font-heading mb-3">Comunidad</h5>
+        <h5 class="text-white font-bold font-heading mb-3 uppercase">Corporativo</h5>
         <ul class="space-y-2 font-mono">
-          <li><a href="https://discord.com" target="_blank" rel="noreferrer" class="hover:text-white transition">Discord Oficial</a></li>
-          <li><a href="#" class="hover:text-white transition">Foro de Usuarios</a></li>
-          <li><a href="#" class="hover:text-white transition">Seguridad & SOC2</a></li>
-          <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
-          <li><a href="#" class="hover:text-white transition">Licencia Apache 2.0</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Claro Empresas Chile</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Centro de Datos Liray</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Contacto Comercial</a></li>
+          <li><a href="#" class="hover:text-red-400 transition">Términos de Servicio</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 font-mono">
-      <span>© 2026 FluxNode Open Source Community. Todos los derechos reservados.</span>
-      <span class="mt-2 sm:mt-0">Inspirado en la libertad del código abierto y los creadores de software.</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-red-950 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 font-mono">
+      <span class="text-white font-bold">© 2026 DATA CENTER LIRAY CLARO — Todos los derechos reservados.</span>
+      <span class="mt-2 sm:mt-0 text-red-200">Infraestructura de Telecomunicaciones & Cloud de Claro Chile.</span>
     </div>
   </footer>
 

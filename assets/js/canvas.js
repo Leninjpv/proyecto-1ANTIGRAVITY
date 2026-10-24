@@ -1,133 +1,129 @@
 /**
- * FluxNode Interactive Canvas Engine
- * Handles workflow graph rendering, drag & drop, bezier connections,
- * step-by-step execution simulation, and node inspector details.
+ * DATA CENTER LIRAY CLARO - Motor de Lienzo Interactivo
+ * Plataforma de Automatización de Flujos & Orquestación de Agentes de IA
+ * Branding: Rojo Claro (#DA291C) y Blanco (#FFFFFF)
  */
 
 (function () {
   // Available Workflow Presets
   const WORKFLOW_PRESETS = {
     'lead-scoring': {
-      title: '⚡ Clasificación de Leads con IA & Sincronización CRM',
-      description: 'Captura webhooks de leads, evalúa intención de compra con Claude 3.5, enruta y notifica a Slack.',
+      title: '⚡ DATA CENTER LIRAY CLARO — Telemetría de Servidores & Alerta IA',
+      description: 'Supervisa eventos de infraestructura crítica en Data Center Liray, procesa métricas con IA y notifica en tiempo real.',
       nodes: [
         {
           id: 'node-webhook',
-          title: 'Webhook Lead',
+          title: 'Sensor Liray IoT',
           type: 'trigger',
-          badge: 'POST /v1/incoming-lead',
-          icon: '⚡',
-          color: '#10b981',
-          bgBadge: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+          badge: 'TELEMETRÍA TIER IV',
+          icon: '🏢',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 40,
           y: 140,
           input: null,
           config: {
-            method: 'POST',
-            path: '/v1/incoming-lead',
-            auth: 'Bearer Token (Header)',
-            rateLimit: '100 req/min'
+            source: 'Data Center Liray (Colina, Chile)',
+            facility: 'Sala de Servidores B - Rack 42',
+            protocol: 'MQTT / HTTPS Telemetry',
+            samplingRate: '10ms ultra-low latency'
           },
           mockOutput: {
-            event: 'lead_captured',
+            facility: 'Data Center Liray CLARO',
+            zone: 'Cluster Tier IV - Misión Crítica',
             timestamp: new Date().toISOString(),
-            data: {
-              name: 'Elena Rostova',
-              email: 'elena@enterprise-tech.io',
-              company_size: '250-500',
-              budget: '$45,000/yr',
-              message: 'Necesitamos reemplazar Zapier por temas de privacidad de datos y soberanía en AWS.'
+            metrics: {
+              pue: 1.18,
+              ambient_temp: '20.4°C',
+              power_redundancy: '100% Dual UPS Activo',
+              fiber_link: 'Anillo de Fibra Óptica Claro 400 Gbps OK'
             }
           }
         },
         {
           id: 'node-ai',
-          title: 'Agente Claude 3.5',
+          title: 'Agente IA Liray',
           type: 'ai-agent',
-          badge: 'LLM Scoring & Intent',
+          badge: 'ANÁLISIS PREDICTIVO',
           icon: '🧠',
-          color: '#8b5cf6',
-          bgBadge: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 320,
           y: 140,
           config: {
-            model: 'claude-3-5-sonnet-20241022',
-            temperature: 0.2,
-            system_prompt: 'Eres un analista de ventas B2B. Evalúa el fit, calcula un score de 1 a 100 y extrae puntos de dolor clave.',
-            output_format: 'JSON Schema'
+            model: 'Claro-Enterprise-LLM (Claude / Llama 3 On-Premise)',
+            temperature: 0.1,
+            role: 'Diagnóstico predictivo de cargas térmicas y saturación de enlaces',
+            security: 'Datos 100% locales en Data Center Liray sin fugas externas'
           },
           mockOutput: {
-            score: 94,
-            tier: 'Tier 1 Enterprise',
-            urgency: 'Alta',
-            recommended_plan: 'Enterprise Dedicated',
-            summary: 'Cliente calificado con alto presupuesto buscando migración desde Zapier por privacidad.'
+            health_index: '99.99%',
+            anomaly_detected: false,
+            predicted_trend: 'Consumo óptimo. Rendimiento de red en rango nominal.',
+            recommendation: 'Mantener balanceo de carga automático en anillo Claro.'
           }
         },
         {
           id: 'node-router',
-          title: 'Router Condicional',
+          title: 'Router de Tráfico',
           type: 'router',
-          badge: 'Score >= 80 ?',
+          badge: 'SLA >= 99.99% ?',
           icon: '🔀',
-          color: '#f59e0b',
-          bgBadge: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+          color: '#FFFFFF',
+          bgBadge: 'bg-white/10 text-white border-white/30',
           x: 600,
           y: 140,
           config: {
-            condition: 'payload.score >= 80',
+            condition: 'telemetry.sla_status == "HEALTHY"',
             true_target: ['node-crm', 'node-slack'],
-            false_target: ['node-email']
+            false_target: ['node-dr-failover']
           },
           mockOutput: {
             evaluation: true,
-            matched_branch: 'High_Value_Path',
-            route_selected: 'Enterprise Priority Queue'
+            status: 'OPERATIVO_EXCELENTE',
+            route_selected: 'Ruta Primaria Fibra Liray'
           }
         },
         {
           id: 'node-crm',
-          title: 'PostgreSQL / Hubspot',
+          title: 'Base de Datos Central',
           type: 'action',
-          badge: 'INSERT into leads',
+          badge: 'REGISTRO AUDITABLE',
           icon: '🗄️',
-          color: '#06b6d4',
-          bgBadge: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 880,
           y: 60,
           config: {
-            table: 'enterprise_deals',
-            action: 'upsert',
-            fields: ['company_size', 'score', 'assigned_rep']
+            datacenter: 'DATA CENTER LIRAY CLARO',
+            storage: 'PostgreSQL Enterprise / NVMe SAN Array',
+            compliance: 'ISO 27001 & Tier IV Certified'
           },
           mockOutput: {
-            status: 'success',
-            row_id: 'deal_9941a8',
-            assigned_rep: 'Carlos Mendez (VP Sales)',
-            pipeline_stage: 'Demo Programada'
+            status: 'COMMITTED',
+            audit_id: 'LIRAY-TX-883921',
+            replication_delay: '0.2ms'
           }
         },
         {
           id: 'node-slack',
-          title: 'Alerta Slack VIP',
+          title: 'NOC / Alerta Claro',
           type: 'action',
-          badge: '#enterprise-deals',
-          icon: '💬',
-          color: '#f43f5e',
-          bgBadge: 'bg-rose-500/10 text-rose-400 border-rose-500/30',
+          badge: 'NOC CLARO 24/7',
+          icon: '🚨',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 880,
           y: 220,
           config: {
-            channel: '#enterprise-deals',
-            bot_name: 'FluxNode Sales Bot',
-            priority: 'urgent',
-            mention: '@sales-leadership'
+            team: 'Centro de Operaciones de Red (NOC) Claro Chile',
+            priority: 'INFO / TELEMETRÍA VERIFICADA',
+            channel: '#noc-liray-mission-critical'
           },
           mockOutput: {
-            delivered: true,
-            ts: '1729731200.012400',
-            channel_id: 'C06E39Z1A',
-            message: '🚀 ¡Nuevo Lead Calificado Tier 1! Elena de enterprise-tech.io (Score: 94)'
+            sent: true,
+            operator_notified: 'NOC Liray Nivel 3',
+            message: '✅ DATA CENTER LIRAY CLARO: Nodo verificado y sincronizado con éxito.'
           }
         }
       ],
@@ -139,73 +135,73 @@
       ]
     },
     'devops-autopilot': {
-      title: '🚨 Autopilot de Incidentes DevOps & Sanación Automática',
-      description: 'Recibe alertas de Prometheus, consulta métricas con Ollama local, reinicia pods y reporta a Telegram.',
+      title: '🚨 DATA CENTER LIRAY CLARO — Autopilot de Sanación y Failover',
+      description: 'Orquestación de contingencia, conmutación por error en milisegundos y balanceo de enlaces de alta capacidad.',
       nodes: [
         {
           id: 'node-webhook',
-          title: 'Alerta Prometheus',
+          title: 'Monitor Enlace Claro',
           type: 'trigger',
-          badge: 'High Memory Alert (K8s)',
-          icon: '🔥',
-          color: '#ef4444',
-          bgBadge: 'bg-red-500/10 text-red-400 border-red-500/30',
+          badge: 'BGP / FIBRA 100G',
+          icon: '🌐',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 40,
           y: 140,
-          config: { alert: 'KubePodCrashLooping', namespace: 'production-api' },
-          mockOutput: { pod: 'auth-service-7f89b', memory_usage: '98.4%', restarts: 6 }
+          config: { link: 'Backbone Liray - Santiago Centro', threshold: 'Jitter < 1ms' },
+          mockOutput: { status: 'OPTIMAL', latency: '0.8ms', packets_dropped: 0 }
         },
         {
           id: 'node-ai',
-          title: 'Agente Ollama (Llama 3)',
+          title: 'IA de Red Claro',
           type: 'ai-agent',
-          badge: 'Diagnóstico Cero-Fuga',
-          icon: '🦙',
-          color: '#8b5cf6',
-          bgBadge: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+          badge: 'RUTEADOR AUTÓNOMO',
+          icon: '🤖',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 320,
           y: 140,
-          config: { model: 'llama3:70b-instruct', endpoint: 'http://localhost:11434' },
-          mockOutput: { diagnosis: 'Memory leak detectado en pool de conexiones Redis', action_suggested: 'drain_and_restart' }
+          config: { algorithm: 'Predictive Bandwidth Shaper', target: 'Zero Congestion' },
+          mockOutput: { decision: 'Ruta balanceada en doble anillo redundante' }
         },
         {
           id: 'node-router',
-          title: 'Validador de Política',
+          title: 'Políticas de Seguridad',
           type: 'router',
-          badge: 'Auto-restart permitido?',
+          badge: 'FIREWALL LIRAY',
           icon: '🛡️',
-          color: '#f59e0b',
-          bgBadge: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+          color: '#FFFFFF',
+          bgBadge: 'bg-white/10 text-white border-white/30',
           x: 600,
           y: 140,
-          config: { policy: 'prod_auto_remediation_whitelist' },
-          mockOutput: { approved: true, audit_hash: 'sha256:7bc03' }
+          config: { ruleset: 'DDoS Shield Claro Enterprise & WAF' },
+          mockOutput: { attack_vector_mitigated: true, rule_action: 'ALLOW_SECURE' }
         },
         {
           id: 'node-crm',
-          title: 'Kubernetes CLI',
+          title: 'Orquestador Cloud',
           type: 'action',
-          badge: 'kubectl rollout restart',
+          badge: 'K8S CLARO CLOUD',
           icon: '☸️',
-          color: '#06b6d4',
-          bgBadge: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 880,
           y: 60,
-          config: { command: 'rollout restart deployment/auth-service' },
-          mockOutput: { rollout_status: 'completed successfully in 18s' }
+          config: { cluster: 'k8s-liray-production', scale: 'Auto-scaling pod group' },
+          mockOutput: { replicas: 12, health: '100% Ready' }
         },
         {
           id: 'node-slack',
-          title: 'Telegram DevOps',
+          title: 'Reporte Ejecutivo',
           type: 'action',
-          badge: 'Canal @SRE_Ops',
-          icon: '✈️',
-          color: '#38bdf8',
-          bgBadge: 'bg-sky-500/10 text-sky-400 border-sky-500/30',
+          badge: 'SLA 99.999%',
+          icon: '📱',
+          color: '#DA291C',
+          bgBadge: 'bg-red-500/20 text-white border-red-500/40',
           x: 880,
           y: 220,
-          config: { chat_id: '-10048928', parse_mode: 'HTML' },
-          mockOutput: { sent: true, text: '✅ Incidente mitigado automáticamente por FluxNode' }
+          config: { recipient: 'Dirección de Operaciones Tecnológicas Claro' },
+          mockOutput: { sms_alert_sent: true, report: 'Disponibilidad total garantizada' }
         }
       ],
       connections: [
@@ -254,43 +250,42 @@
     currentPreset.nodes.forEach((node) => {
       const nodeEl = document.createElement('div');
       nodeEl.id = node.id;
-      nodeEl.className = 'workflow-node rounded-xl p-3.5 w-60 border bg-slate-900/90 shadow-xl backdrop-blur-md cursor-grab active:cursor-grabbing hover:border-indigo-500/50 transition-all select-none';
+      nodeEl.className = 'workflow-node rounded-xl p-3.5 w-60 border bg-[#10131d]/95 shadow-xl backdrop-blur-md cursor-grab active:cursor-grabbing hover:border-red-500/60 transition-all select-none';
       nodeEl.style.left = `${node.x}px`;
       nodeEl.style.top = `${node.y}px`;
-      nodeEl.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+      nodeEl.style.borderColor = 'rgba(255, 255, 255, 0.15)';
 
       nodeEl.innerHTML = `
         <div class="flex items-center justify-between mb-2">
           <div class="flex items-center gap-2">
-            <span class="w-8 h-8 rounded-lg flex items-center justify-center text-lg bg-slate-800/80 border border-slate-700/60 shadow-inner">
+            <span class="w-8 h-8 rounded-lg flex items-center justify-center text-lg bg-red-600/20 border border-red-500/40 shadow-inner">
               ${node.icon}
             </span>
             <div>
-              <h4 class="text-xs font-semibold text-white leading-tight">${node.title}</h4>
-              <span class="text-[10px] text-slate-400 font-mono tracking-wide">${node.type.toUpperCase()}</span>
+              <h4 class="text-xs font-bold text-white leading-tight font-heading">${node.title}</h4>
+              <span class="text-[10px] text-red-200 font-mono tracking-wide">${node.type.toUpperCase()}</span>
             </div>
           </div>
           <span class="node-status-indicator w-2.5 h-2.5 rounded-full bg-slate-600 transition-colors duration-300"></span>
         </div>
         
         <div class="mt-2.5 pt-2 border-t border-slate-800 flex items-center justify-between text-[11px]">
-          <span class="px-2 py-0.5 rounded-full border text-[10px] font-mono truncate max-w-[150px] ${node.bgBadge}">
+          <span class="px-2 py-0.5 rounded-full border text-[10px] font-mono truncate max-w-[150px] font-semibold ${node.bgBadge}">
             ${node.badge}
           </span>
-          <span class="node-exec-time text-[10px] text-slate-400 font-mono">Listo</span>
+          <span class="node-exec-time text-[10px] text-white/80 font-mono">Listo</span>
         </div>
 
-        <!-- Connection Ports -->
-        ${node.type !== 'trigger' ? '<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-indigo-400 shadow flex items-center justify-center pointer-events-none"><div class="w-1.5 h-1.5 rounded-full bg-indigo-400"></div></div>' : ''}
-        <div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-cyan-400 shadow flex items-center justify-center pointer-events-none"><div class="w-1.5 h-1.5 rounded-full bg-cyan-400"></div></div>
+        <!-- Connection Ports con Rojo Claro y Blanco -->
+        ${node.type !== 'trigger' ? '<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-900 border-2 border-white shadow flex items-center justify-center pointer-events-none"><div class="w-1.5 h-1.5 rounded-full bg-white"></div></div>' : ''}
+        <div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-900 border-2 border-red-500 shadow flex items-center justify-center pointer-events-none"><div class="w-1.5 h-1.5 rounded-full bg-red-500"></div></div>
       `;
 
       // Node Dragging logic
       makeDraggable(nodeEl, node);
 
       // Node Click Inspector
-      nodeEl.addEventListener('click', (e) => {
-        // Only inspect if not actively dragged
+      nodeEl.addEventListener('click', () => {
         if (!nodeEl.dataset.isDragging) {
           openNodeInspector(node.id);
         }
@@ -300,11 +295,10 @@
     });
   }
 
-  // Draw SVG Bezier Curves
+  // Draw SVG Bezier Curves con gradiente Rojo Claro y Blanco
   function drawConnections() {
     if (!svgConnections || !canvasWrapper) return;
 
-    // Clear existing paths (keep defs)
     const defs = svgConnections.querySelector('defs');
     svgConnections.innerHTML = '';
     if (defs) {
@@ -312,10 +306,10 @@
     } else {
       const newDefs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
       newDefs.innerHTML = `
-        <linearGradient id="active-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#6366f1" />
-          <stop offset="50%" stop-color="#38bdf8" />
-          <stop offset="100%" stop-color="#10b981" />
+        <linearGradient id="claro-red-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#E60000" />
+          <stop offset="50%" stop-color="#DA291C" />
+          <stop offset="100%" stop-color="#FFFFFF" />
         </linearGradient>
         <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
           <feGaussianBlur stdDeviation="4" result="blur" />
@@ -325,7 +319,7 @@
       svgConnections.appendChild(newDefs);
     }
 
-    currentPreset.connections.forEach((conn, index) => {
+    currentPreset.connections.forEach((conn) => {
       const fromEl = document.getElementById(conn.from);
       const toEl = document.getElementById(conn.to);
       if (!fromEl || !toEl) return;
@@ -343,7 +337,7 @@
 
       const d = `M ${fromX} ${fromY} C ${cp1X} ${cp1Y}, ${cp2X} ${cp2Y}, ${toX} ${toY}`;
 
-      // Background path (dim guide)
+      // Background path
       const pathBg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       pathBg.setAttribute('d', d);
       pathBg.setAttribute('class', 'connection-path-bg');
@@ -448,12 +442,11 @@
     }
   }
 
-  // Workflow Execution Simulation
+  // Simulation
   async function runWorkflowSimulation() {
     if (isExecuting) return;
     isExecuting = true;
 
-    // Reset nodes & UI
     resetExecutionVisuals();
 
     if (btnRunWorkflow) {
@@ -463,34 +456,34 @@
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <span>Ejecutando...</span>
+        <span class="text-white font-bold">Procesando...</span>
       `;
     }
 
     if (executionBadge) {
-      executionBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-amber-500/10 text-amber-400 border border-amber-500/30 flex items-center gap-1.5';
-      executionBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> Procesando Flujo';
+      executionBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-red-600/20 text-white border border-red-500/50 flex items-center gap-1.5';
+      executionBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> Ejecutando en DATA CENTER LIRAY CLARO';
     }
 
     if (executionConsole) {
       executionConsole.classList.remove('hidden');
     }
 
-    logConsoleMessage('⚙️ Iniciando ejecución del grafo de automatización en entorno seguro...', 'info');
+    logConsoleMessage('🔴 DATA CENTER LIRAY CLARO — Iniciando orquestación de flujo de misión crítica...', 'info');
 
     const totalStartTime = performance.now();
 
     try {
-      // Step 1: Webhook Trigger
-      await executeNodeStep('node-webhook', '12ms', '📥 Webhook recibido con payload verificado (Firma HMAC SHA256 OK)');
+      // Step 1: Telemetría
+      await executeNodeStep('node-webhook', '8ms', '📥 Telemetría recibida en Data Center Liray. Fibra óptica Claro operativa al 100%.');
       await animatePulseBetween('node-webhook', 'node-ai');
 
-      // Step 2: AI Processing
-      await executeNodeStep('node-ai', '284ms', '🧠 Claude 3.5 Sonnet: Evaluando lead... Score asignado: 94/100 (Tier 1 Enterprise)');
+      // Step 2: Agente IA
+      await executeNodeStep('node-ai', '192ms', '🧠 Agente IA Claro: Diagnóstico predictivo completado. Rendimiento de cluster Tier IV: 99.999%.');
       await animatePulseBetween('node-ai', 'node-router');
 
-      // Step 3: Router Evaluation
-      await executeNodeStep('node-router', '6ms', '🔀 Condición cumplida: Score (94) >= 80 -> Ramificación Alta Prioridad activada');
+      // Step 3: Router
+      await executeNodeStep('node-router', '4ms', '🔀 Router de Tráfico: SLA óptimo validado -> Enrutamiento por anillo redundante.');
 
       // Step 4: Parallel actions
       const animCrm = animatePulseBetween('node-router', 'node-crm');
@@ -498,25 +491,24 @@
       await Promise.all([animCrm, animSlack]);
 
       await Promise.all([
-        executeNodeStep('node-crm', '42ms', '🗄️ PostgreSQL: Lead insertado con ID #deal_9941a8 en pipeline Enterprise'),
-        executeNodeStep('node-slack', '35ms', '💬 Slack: Alerta enviada a #enterprise-deals con mención ejecutiva')
+        executeNodeStep('node-crm', '28ms', '🗄️ Base Central: Transacción confirmada en array NVMe con cifrado AES-256.'),
+        executeNodeStep('node-slack', '22ms', '🚨 NOC Claro: Estado verde confirmado en pantalla de control 24/7.')
       ]);
 
       const totalElapsed = Math.round(performance.now() - totalStartTime);
-      logConsoleMessage(`🎉 Flujo ejecutado con éxito en ${totalElapsed}ms. 0 errores detectados.`, 'success');
+      logConsoleMessage(`🎉 DATA CENTER LIRAY CLARO: Flujo ejecutado con éxito en ${totalElapsed}ms. 0 incidencias.`, 'success');
 
       if (executionBadge) {
-        executionBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5';
-        executionBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Éxito (200 OK)';
+        executionBadge.className = 'px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-red-600 text-white border border-red-400 flex items-center gap-1.5 shadow-md shadow-red-600/30';
+        executionBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-white"></span> Operación Exitosa (Tier IV)';
       }
 
       if (executionTimeText) {
-        executionTimeText.textContent = `Última ejecución: hace segundos • ${totalElapsed}ms`;
+        executionTimeText.textContent = `Última telemetría: hace segundos • ${totalElapsed}ms`;
       }
 
-      // Notify user via toast
       if (window.FluxToast) {
-        window.FluxToast.show('Flujo completado exitosamente en ' + totalElapsed + 'ms', 'success');
+        window.FluxToast.show('DATA CENTER LIRAY CLARO: Flujo completado en ' + totalElapsed + 'ms', 'success');
       }
 
     } catch (err) {
@@ -526,10 +518,10 @@
       if (btnRunWorkflow) {
         btnRunWorkflow.disabled = false;
         btnRunWorkflow.innerHTML = `
-          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
           </svg>
-          <span>Ejecutar Flujo</span>
+          <span class="text-white font-bold">Ejecutar Flujo</span>
         `;
       }
     }
@@ -540,7 +532,6 @@
       const nodeEl = document.getElementById(nodeId);
       if (!nodeEl) return resolve();
 
-      // Set executing state
       nodeEl.classList.remove('success');
       nodeEl.classList.add('executing');
       const indicator = nodeEl.querySelector('.node-status-indicator');
@@ -549,17 +540,16 @@
       if (timeSpan) timeSpan.textContent = 'Procesando...';
 
       setTimeout(() => {
-        // Set success state
         nodeEl.classList.remove('executing');
         nodeEl.classList.add('success');
-        if (indicator) indicator.className = 'node-status-indicator w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]';
+        if (indicator) indicator.className = 'node-status-indicator w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_10px_#DA291C]';
         if (timeSpan) {
           timeSpan.textContent = `✓ ${execTime}`;
-          timeSpan.className = 'node-exec-time text-[10px] text-emerald-400 font-mono font-medium';
+          timeSpan.className = 'node-exec-time text-[10px] text-white font-mono font-bold';
         }
         logConsoleMessage(logMessage, 'info');
         resolve();
-      }, 400);
+      }, 350);
     });
   }
 
@@ -571,12 +561,12 @@
       pathEl.classList.add('active');
 
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('r', '5');
+      circle.setAttribute('r', '6');
       circle.setAttribute('class', 'pulse-circle');
       svgConnections.appendChild(circle);
 
       const pathLength = pathEl.getTotalLength();
-      const duration = 380;
+      const duration = 360;
       let startTime = null;
 
       function step(timestamp) {
@@ -625,12 +615,12 @@
     const line = document.createElement('div');
     line.className = 'flex items-start gap-2 py-0.5 text-xs font-mono';
 
-    let colorClass = 'text-slate-300';
-    if (type === 'success') colorClass = 'text-emerald-400 font-semibold';
-    if (type === 'error') colorClass = 'text-red-400 font-semibold';
+    let colorClass = 'text-white';
+    if (type === 'success') colorClass = 'text-white font-bold bg-red-600/30 px-1 rounded';
+    if (type === 'error') colorClass = 'text-red-400 font-bold';
 
     line.innerHTML = `
-      <span class="text-slate-500 shrink-0">[${time}]</span>
+      <span class="text-red-400 shrink-0 font-bold">[${time}]</span>
       <span class="${colorClass}">${msg}</span>
     `;
 
@@ -645,7 +635,6 @@
 
     activeNodeId = nodeId;
 
-    // Highlight selected node
     currentPreset.nodes.forEach((n) => {
       const el = document.getElementById(n.id);
       if (el) el.classList.toggle('selected', n.id === nodeId);
@@ -702,7 +691,7 @@
     }
   }
 
-  // Setup Presets Dropdown/Buttons
+  // Setup Presets Buttons
   function setupPresetButtons() {
     const presetButtons = document.querySelectorAll('[data-workflow-preset]');
     presetButtons.forEach((btn) => {
@@ -713,8 +702,12 @@
           currentPresetKey = key;
           currentPreset = WORKFLOW_PRESETS[key];
           
-          presetButtons.forEach(b => b.classList.remove('bg-indigo-600/30', 'border-indigo-500', 'text-white'));
-          btn.classList.add('bg-indigo-600/30', 'border-indigo-500', 'text-white');
+          presetButtons.forEach(b => {
+            b.classList.remove('bg-red-600', 'border-red-500', 'text-white', 'shadow-red-600/40');
+            b.classList.add('bg-slate-900', 'border-slate-800', 'text-slate-300');
+          });
+          btn.classList.add('bg-red-600', 'border-red-500', 'text-white', 'shadow-md', 'shadow-red-600/40');
+          btn.classList.remove('bg-slate-900', 'border-slate-800', 'text-slate-300');
 
           const headerTitle = document.getElementById('canvas-workflow-name');
           if (headerTitle) {
@@ -734,14 +727,12 @@
     });
   }
 
-  // Resize listener
   function setupResizeObserver() {
     window.addEventListener('resize', () => {
       drawConnections();
     });
   }
 
-  // Expose API
   window.FluxCanvas = {
     init: initCanvas,
     run: runWorkflowSimulation,
@@ -755,14 +746,12 @@
         renderNodes();
         drawConnections();
         resetExecutionVisuals();
-        // Scroll smoothly to canvas
         const el = document.getElementById('interactive-canvas-section');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
 
-  // Auto-init on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initCanvas);
   } else {

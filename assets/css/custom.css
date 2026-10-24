@@ -1,30 +1,36 @@
 /* ==========================================================================
-   FluxNode - Custom Styles & Canvas Styling
+   DATA CENTER LIRAY CLARO - Custom Styles & Canvas Styling
+   Branding: Rojo Claro (#DA291C / #E60000) y Blanco (#FFFFFF)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
 
 :root {
-  --primary: #6366f1;
-  --primary-glow: rgba(99, 102, 241, 0.25);
-  --secondary: #06b6d4;
-  --accent-purple: #8b5cf6;
-  --canvas-bg: #0b0f19;
-  --canvas-grid: rgba(255, 255, 255, 0.04);
-  --node-bg: rgba(18, 24, 38, 0.85);
-  --node-border: rgba(255, 255, 255, 0.1);
-  --node-hover: rgba(99, 102, 241, 0.4);
+  --claro-red: #DA291C;
+  --claro-red-bright: #E60000;
+  --claro-red-hover: #F01E10;
+  --claro-red-dark: #A31208;
+  --primary: #DA291C;
+  --primary-glow: rgba(218, 41, 28, 0.4);
+  --secondary: #FFFFFF;
+  --accent-red: #EF4444;
+  --canvas-bg: #090B10;
+  --canvas-grid: rgba(255, 255, 255, 0.05);
+  --node-bg: rgba(18, 20, 29, 0.9);
+  --node-border: rgba(255, 255, 255, 0.12);
+  --node-hover: rgba(218, 41, 28, 0.6);
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #060911;
-  color: #f1f5f9;
+  background-color: #06070B;
+  color: #FFFFFF;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .font-heading {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #FFFFFF;
 }
 
 code, pre, .font-mono {
@@ -37,33 +43,33 @@ code, pre, .font-mono {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #08090D;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #232733;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #DA291C;
 }
 
-/* Background Gradients & Glows */
+/* Background Gradients & Glows con Rojo Claro y Blanco */
 .hero-glow-1 {
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(99, 102, 241, 0) 70%);
+  background: radial-gradient(circle, rgba(218, 41, 28, 0.28) 0%, rgba(218, 41, 28, 0) 70%);
 }
 
 .hero-glow-2 {
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(6, 182, 212, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .hero-glow-3 {
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+  background: radial-gradient(circle, rgba(163, 18, 8, 0.22) 0%, rgba(163, 18, 8, 0) 70%);
 }
 
 /* Canvas Grid Pattern */
 .canvas-grid-pattern {
-  background-color: #0a0e1a;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-color: #090B11;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -78,7 +84,7 @@ code, pre, .font-mono {
   position: absolute;
   z-index: 10;
   transition: transform 0.05s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   cursor: grab;
 }
 
@@ -87,27 +93,27 @@ code, pre, .font-mono {
 }
 
 .workflow-node.selected {
-  border-color: #6366f1 !important;
-  box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+  border-color: #DA291C !important;
+  box-shadow: 0 0 28px rgba(218, 41, 28, 0.65);
 }
 
 .workflow-node.executing {
-  border-color: #f59e0b !important;
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+  border-color: #FBBF24 !important;
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
   animation: pulse-border 1.5s infinite;
 }
 
 .workflow-node.success {
-  border-color: #10b981 !important;
-  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+  border-color: #DA291C !important;
+  box-shadow: 0 0 25px rgba(218, 41, 28, 0.55);
 }
 
 @keyframes pulse-border {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 0 15px rgba(218, 41, 28, 0.35);
   }
   50% {
-    box-shadow: 0 0 35px rgba(245, 158, 11, 0.7);
+    box-shadow: 0 0 35px rgba(218, 41, 28, 0.85);
   }
 }
 
@@ -123,35 +129,35 @@ code, pre, .font-mono {
 }
 
 .connection-path-bg {
-  stroke: rgba(255, 255, 255, 0.08);
+  stroke: rgba(255, 255, 255, 0.09);
   stroke-width: 3;
   fill: none;
 }
 
 .connection-path {
-  stroke: #475569;
+  stroke: #4B5563;
   stroke-width: 2.5;
   fill: none;
   transition: stroke 0.3s ease;
 }
 
 .connection-path.active {
-  stroke: url(#active-gradient);
-  stroke-width: 3;
-  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.7));
+  stroke: url(#claro-red-gradient);
+  stroke-width: 3.5;
+  filter: drop-shadow(0 0 8px rgba(218, 41, 28, 0.85));
 }
 
 .pulse-circle {
-  fill: #38bdf8;
-  filter: drop-shadow(0 0 8px #38bdf8);
+  fill: #FFFFFF;
+  filter: drop-shadow(0 0 10px #DA291C) drop-shadow(0 0 4px #FFFFFF);
 }
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 18, 26, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-panel-hover {
@@ -159,14 +165,14 @@ code, pre, .font-mono {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(30, 41, 59, 0.75);
-  border-color: rgba(99, 102, 241, 0.35);
+  background: rgba(24, 28, 40, 0.85);
+  border-color: rgba(218, 41, 28, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 12px 30px -10px rgba(218, 41, 28, 0.3);
 }
 
-/* Shimmer animation for badges */
-@keyframes shimmer {
+/* Shimmer animation for Claro Badges */
+@keyframes shimmer-claro {
   0% {
     background-position: -200% 0;
   }
@@ -176,18 +182,18 @@ code, pre, .font-mono {
 }
 
 .badge-shimmer {
-  background: linear-gradient(90deg, rgba(99,102,241,0.1) 0%, rgba(99,102,241,0.3) 50%, rgba(99,102,241,0.1) 100%);
+  background: linear-gradient(90deg, rgba(218,41,28,0.12) 0%, rgba(218,41,28,0.35) 50%, rgba(218,41,28,0.12) 100%);
   background-size: 200% 100%;
-  animation: shimmer 3s infinite linear;
+  animation: shimmer-claro 3s infinite linear;
 }
 
 /* Terminal mock styling */
 .terminal-window {
-  background: #090d16;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #090B10;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* Feature Grid Glow Card */
@@ -202,8 +208,8 @@ code, pre, .font-mono {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.6), transparent);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #DA291C, transparent);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -212,22 +218,33 @@ code, pre, .font-mono {
   opacity: 1;
 }
 
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+/* Buttons con Rojo Claro oficial y letras blancas */
+.btn-claro {
+  background: linear-gradient(135deg, #E60000 0%, #DA291C 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(218, 41, 28, 0.35);
+  transition: all 0.2s ease;
 }
 
-.animate-float-slow {
-  animation: float 6s ease-in-out infinite;
+.btn-claro:hover {
+  background: linear-gradient(135deg, #F01E10 0%, #E60000 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 22px rgba(218, 41, 28, 0.55);
+  transform: translateY(-1px);
 }
 
-.animate-float-delayed {
-  animation: float 7s ease-in-out 2s infinite;
+.btn-claro-outline {
+  background: rgba(218, 41, 28, 0.1);
+  color: #FFFFFF;
+  border: 1px solid #DA291C;
+  transition: all 0.2s ease;
+}
+
+.btn-claro-outline:hover {
+  background: #DA291C;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(218, 41, 28, 0.4);
 }
 
 /* Tooltip & Toast */

@@ -1,75 +1,52 @@
-# ⚡ FluxNode — Landing Page de Automatización de Flujos de Trabajo (Estilo n8n)
+# 🔴 DATA CENTER LIRAY CLARO — Plataforma de Automatización de Misión Crítica
 
-Una landing page interactiva, moderna y de alto impacto para una plataforma de automatización de código abierto similar a **n8n**, orientada a ingenieros, desarrolladores y equipos técnicos.
-
----
-
-## 🚀 Características Principales
-
-1. **Lienzo Interactivo de Automatización en Vivo (Canvas Showcase)**:
-   - Nodos arrastrables (*drag and drop*) sobre una cuadrícula con estética técnica oscura.
-   - Conexiones con curvas de Bézier dinámicas en SVG que se recalculan al mover los nodos.
-   - **Simulación de Ejecución Paso a Paso ("Ejecutar Flujo")**:
-     - Visualización del flujo: Trigger Webhook ➔ Agente IA (Claude 3.5 / Ollama) ➔ Router de Decisión ➔ Acciones (PostgreSQL & Slack).
-     - Pulsos de luz y partículas animadas recorriendo las conexiones.
-     - Cambios de estado en los nodos (Pendiente, En Ejecución, Éxito con latencia medida e.g. `12ms`, `284ms`).
-     - Consola de logs en vivo (*Event Stream*) desplegable con formato JSON.
-   - **Inspector Lateral de Nodos**:
-     - Al hacer clic en cualquier nodo se abre un panel lateral con parámetros, credenciales y esquema JSON de entrada/salida.
-   - **Selector de Plantillas Dinámicas**:
-     - *Clasificación de Leads con IA & Sincronización CRM*
-     - *Autopilot de Incidentes DevOps & Sanación Automática con Ollama*
-
-2. **Comparativa Directa Transparente**:
-   - Tabla comparativa detallada entre **FluxNode**, **n8n**, **Zapier** y **Make (Integromat)** en dimensiones clave: autoalojamiento, privacidad, costo por ejecución, soporte de agentes de IA, código JS/Python y licencias.
-
-3. **6 Pilares de Arquitectura y Potencia**:
-   - Lienzo visual con depuración en vivo.
-   - Orquestación de Agentes de IA y pipelines RAG (LangChain, Ollama, OpenAI, Anthropic).
-   - Código nativo en JavaScript (Node.js) y Python sin restricciones.
-   - Despliegue en 1 comando (Docker, Compose, Helm).
-   - Resiliencia, reintentos exponenciales y sub-workflows.
-   - Gobernanza Enterprise (SSO SAML, RBAC, auditoría y cifrado AES-256).
-
-4. **Terminal / Playground de Despliegue Rápido**:
-   - Pestañas interactivas para comandos `Docker Run`, `Docker Compose`, `Kubernetes Helm` y `NPM CLI`.
-   - Botón de copiado al portapapeles con feedback visual y sistema de notificaciones *Toast*.
-
-5. **Calculadora Interactiva de Ahorro / ROI**:
-   - Control deslizante interactivo por volumen de tareas (de 5,000 a 300,000+ ejecuciones/mes).
-   - Cálculo en tiempo real del gasto estimado en Zapier vs Make vs FluxNode Cloud vs FluxNode Self-Hosted ($0) y cálculo del ahorro anual.
-
-6. **Directorio de 500+ Integraciones**:
-   - Buscador en tiempo real con filtrado instantáneo por texto y categorías (IA & Modelos, Bases de Datos, Comunicaciones, DevOps).
-
-7. **Planes de Precios Flexibles**:
-   - Selector interactivo Mensual / Anual (con 20% de descuento).
-   - Niveles: Comunidad Self-Hosted ($0 para siempre), Cloud Pro y Enterprise Dedicado.
-
-8. **Acordeón de Preguntas Frecuentes (FAQ)** y formulario de suscripción/despliegue rápido.
+Landing page corporativa e interactiva para **DATA CENTER LIRAY CLARO**, la plataforma de automatización de flujos de trabajo, orquestación de agentes de IA y telemetría avanzada inspirada en la arquitectura de **n8n**, desplegada sobre la infraestructura certificada **Tier IV** de **Claro Chile** (Liray, Colina).
 
 ---
 
-## 📂 Estructura del Proyecto
+## 🎨 Identidad de Marca & Branding
+
+- **Nombre del Software**: `DATA CENTER LIRAY CLARO` (en mayúsculas oficiales).
+- **Color Primario de Marca**: Rojo Claro (`#DA291C` / `#E60000`).
+- **Color de Tipografía y Contrastes**: Blanco puro (`#FFFFFF`) y letras en negrita de alta legibilidad.
+- **Estética Visual**: *Deep Tech / Mission Critical*, con cuadrícula técnica, reflejos y halos de luz roja, bordes con brillo sutil y curvas de conexión SVG en degradado Rojo Claro a Blanco.
+
+---
+
+## 🚀 Capacidades Destacadas
+
+1. **Lienzo Interactivo de Nodos en Vivo**:
+   - Nodos arrastrables con telemetría en tiempo real de Data Center Liray.
+   - Conexiones con curvas de Bézier dinámicas y partículas de pulso luminoso en rojo y blanco.
+   - Botón interactivo **"Ejecutar Flujo"** con simulación de latencias (`8ms`, `192ms`), estados de éxito y consola de logs del NOC (Event Stream).
+   - Panel lateral de inspección de nodos con esquemas JSON y parámetros de red.
+2. **Comparativa de Infraestructura**:
+   - Análisis frente a n8n, Zapier y Make destacando residencia de datos en Chile (Colina), certificación Tier IV, $0 en costo por tarea y enlaces de fibra óptica de 400 Gbps.
+3. **Catálogo de 500+ Conectores**:
+   - Buscador en tiempo real y conectores nativos para bases de datos, APIs de telecomunicaciones (SMS Gateway Claro), IA (Ollama Local, Claude 3.5, OpenAI) y ERPs (SAP HANA, Oracle).
+4. **Calculadora de Costos Empresariales**:
+   - Deslizador de volumen con ahorro estimado frente a alternativas extranjeras.
+5. **Terminal de Despliegue Rápido**:
+   - Pestañas con comandos para `Docker Run`, `Docker Compose`, `Kubernetes Liray` y `Claro CLI` con copiado en 1 clic.
+
+---
+
+## 📂 Estructura de Archivos
 
 ```
 c:\Users\lenin\OneDrive\Desktop\ANTIGRAVITY\
-├── index.html              # Landing page completa, moderna y responsive
+├── index.html              # Landing page principal con branding Rojo Claro y letras blancas
 ├── assets/
 │   ├── css/
-│   │   └── custom.css      # Estilos personalizados, gradientes, animaciones y canvas
+│   │   └── custom.css      # Estilos personalizados, gradientes y animaciones en Rojo Claro
 │   └── js/
-│       ├── canvas.js       # Motor del lienzo interactivo (arrastre, SVG, simulación)
-│       └── main.js         # Lógica UI (calculadora ROI, búsqueda, tabs CLI, toast)
+│       ├── canvas.js       # Motor de lienzo interactivo para DATA CENTER LIRAY CLARO
+│       └── main.js         # Lógica interactiva (calculadora, tabs, toast, filtros)
 └── README.md               # Documentación del proyecto
 ```
 
 ---
 
-## 🌐 Cómo Abrir y Ver la Landing Page
+## 🌐 Cómo Ver la Landing Page
 
-No requiere instalación ni dependencias adicionales de Node.js o Python.
-
-1. Abre el explorador de archivos en la carpeta:
-   `c:\Users\lenin\OneDrive\Desktop\ANTIGRAVITY`
-2. Haz doble clic en [`index.html`](file:///c:/Users/lenin/OneDrive/Desktop/ANTIGRAVITY/index.html) para abrirla directamente en cualquier navegador web moderno (Google Chrome, Microsoft Edge, Firefox, Brave, Safari).
+1. Abre el archivo [`index.html`](file:///c:/Users/lenin/OneDrive/Desktop/ANTIGRAVITY/index.html) haciendo doble clic en el explorador de archivos para cargarlo en Google Chrome, Microsoft Edge, Firefox, Brave o cualquier navegador moderno.
